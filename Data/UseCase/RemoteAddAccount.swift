@@ -8,18 +8,27 @@
 import Foundation
 import Domain
 
-public final class RemoteAddAccount {
+public final class RemoteAddAccount: AddAccount {
+
     private let url:URL
-    private let HttpPostClient: HttpPostClient
+    private let HttpClient: HttpPostClient
     
-    public init(url: URL, HttpPostClient: HttpPostClient) {
+    public init(url: URL, HttpClient: HttpPostClient) {
         self.url = url
-        self.HttpPostClient = HttpPostClient
+        self.HttpClient = HttpClient
     }
     
-    public func add(addAccountModel: AddAccountModel, comletion: @escaping (DomainError) -> Void) {
-        HttpPostClient.post(to: url, with: addAccountModel.toData()) { error in
-            comletion(.unexpected)
+    public func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
+        HttpClient.post(to: url, with: addAccountModel.toData()) { Result in
+            switch Result {
+            case .success(let data):
+                if let model: AccountModel = data.toModel() {
+                    completion(.success(model))
+                }
+                
+            case .failure: completion(.failure(.unexpected))
+            }
         }
     }
 }
+
