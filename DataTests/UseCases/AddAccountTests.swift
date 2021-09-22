@@ -45,6 +45,16 @@ class RemoteAddAccountTests: XCTestCase {
             httClientSpy.completionWithData(makeInvalidData())
         })
     }
+    
+    func test_add_should_not_comlete_if_sut_has_been_deallocated() {
+        let httClientSpy = HttpClientSpy()
+        var sut:  RemoteAddAccount? =  RemoteAddAccount(url: makeUrl(), HttpClient: httClientSpy)
+        var result: Result<AccountModel, DomainError>?
+        sut?.add(addAccountModel: makeAddAccountModel()) { result = $0 }
+        sut = nil
+        httClientSpy.completionWithError(.noConnectivity)
+        XCTAssertNil(result)
+    }
 
 }
 
@@ -55,12 +65,6 @@ extension RemoteAddAccountTests {
         checkMemoryLeak(for: httClientSpy, file: file, line: line)
         checkMemoryLeak(for: sut, file: file, line: line)
         return (sut, httClientSpy)
-    }
-    
-    func checkMemoryLeak(for instance: AnyObject, file: StaticString = #filePath, line: UInt = #line) {
-        addTeardownBlock { [weak instance] in
-            XCTAssertNil(instance, file: file, line: line)
-        }
     }
     
     func expect(_ sut: RemoteAddAccount, comleteWith expectedResult: Result<AccountModel, DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
@@ -77,14 +81,6 @@ extension RemoteAddAccountTests {
         wait(for: [exp], timeout: 1)
     }
     
-    func makeInvalidData() -> Data {
-        return Data("Invalid_data".utf8)
-    }
-    
-    func makeUrl() -> URL {
-        return URL(string: "htt://any-url.com")!
-    }
-    
     func makeAddAccountModel() -> AddAccountModel {
         return AddAccountModel(name: "any name", email: "anyname@gmail.com", password: "12345", passwordConfiemation: "12345")
     }
@@ -92,25 +88,5 @@ extension RemoteAddAccountTests {
     func makeAccountModel() -> AccountModel {
         return AccountModel(id: "a2", name: "any name", email: "anyname@gmail.com", password: "12345")
     }
-
-    
-    class HttpClientSpy: HttpPostClient {
-        var urls = [URL]()
-        var data: Data?
-        var completion: ((Result<Data, HttpError>) -> Void)?
-        
-        func post(to url: URL, with data: Data?, completion: @escaping (Result<Data, HttpError>) -> Void) {
-            self.urls.append(url)
-            self.data = data
-            self.completion = completion
-        }
-        
-        func completionWithError(_ error: HttpError) {
-            completion?(.failure(error))
-        }
-        
-        func completionWithData(_ data: Data) {
-            completion?(.success(data))
-        }
-    }
+ 
 }
