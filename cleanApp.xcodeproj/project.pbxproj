@@ -29,6 +29,8 @@
 		0455782226FCC7AF00AF8FD9 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0415ACDF26F2706600194713 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0455782626FCC7B400AF8FD9 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0415ACCB26F26D0100194713 /* Domain.framework */; };
 		0455782726FCC7B400AF8FD9 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0415ACCB26F26D0100194713 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0455784826FCEE6600AF8FD9 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0455784726FCEE6600AF8FD9 /* AlamofireAdapter.swift */; };
+		0455785226FCEFDF00AF8FD9 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0455785126FCEFDF00AF8FD9 /* UrlProtocolStub.swift */; };
 		045CF02226FB69DD0034F747 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045CF01926FB69DC0034F747 /* Infra.framework */; };
 		04FDFE9626F3A0F500A0EE98 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDFE9526F3A0F500A0EE98 /* Model.swift */; };
 		04FDFE9A26F3A18200A0EE98 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDFE9926F3A18200A0EE98 /* RemoteAddAccount.swift */; };
@@ -109,7 +111,7 @@
 		0415ACE726F2706600194713 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0415ACEE26F2706600194713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0415AD0626F2795800194713 /* AddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountTests.swift; sourceTree = "<group>"; };
-		0418255426FB6B7A0043D26A /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
+		0418255426FB6B7A0043D26A /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlamofireAdapterTests.swift; path = "../New Group/AlamofireAdapterTests.swift"; sourceTree = "<group>"; };
 		04545E8426F4E029001E05E1 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		04545E8A26F4F241001E05E1 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		04545E9126F8E13D001E05E1 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
@@ -117,6 +119,8 @@
 		04545E9C26FA6FA5001E05E1 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		04545EA026FA7013001E05E1 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
 		04545EA526FA70BD001E05E1 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
+		0455784726FCEE6600AF8FD9 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
+		0455785126FCEFDF00AF8FD9 /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		045CF01926FB69DC0034F747 /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		045CF01C26FB69DC0034F747 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045CF02126FB69DD0034F747 /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,9 +274,27 @@
 			path = Http;
 			sourceTree = "<group>";
 		};
+		0455784C26FCEF3700AF8FD9 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				0455784726FCEE6600AF8FD9 /* AlamofireAdapter.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		0455785026FCEF9B00AF8FD9 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				0418255426FB6B7A0043D26A /* AlamofireAdapterTests.swift */,
+				0455785126FCEFDF00AF8FD9 /* UrlProtocolStub.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
 		045CF01A26FB69DC0034F747 /* Infra */ = {
 			isa = PBXGroup;
 			children = (
+				0455784C26FCEF3700AF8FD9 /* Http */,
 				045CF01C26FB69DC0034F747 /* Info.plist */,
 			);
 			path = Infra;
@@ -281,7 +303,7 @@
 		045CF02526FB69DD0034F747 /* InfraTests */ = {
 			isa = PBXGroup;
 			children = (
-				0418255426FB6B7A0043D26A /* AlamofireAdapterTests.swift */,
+				0455785026FCEF9B00AF8FD9 /* Http */,
 				045CF02826FB69DD0034F747 /* Info.plist */,
 			);
 			path = InfraTests;
@@ -477,6 +499,7 @@
 					};
 					045CF01826FB69DC0034F747 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					045CF02026FB69DD0034F747 = {
 						CreatedOnToolsVersion = 12.2;
@@ -585,6 +608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0455784826FCEE6600AF8FD9 /* AlamofireAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +620,7 @@
 				0418256226FB6C6B0043D26A /* TextExtensions.swift in Sources */,
 				0418256C26FB6C700043D26A /* AccountModelFactory.swift in Sources */,
 				0418255526FB6B7A0043D26A /* AlamofireAdapterTests.swift in Sources */,
+				0455785226FCEFDF00AF8FD9 /* UrlProtocolStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,6 +929,7 @@
 		045CF02A26FB69DD0034F747 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -922,6 +948,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -929,6 +956,7 @@
 		045CF02B26FB69DD0034F747 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -954,6 +982,7 @@
 		045CF02C26FB69DD0034F747 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = InfraTests/Info.plist;
@@ -973,6 +1002,7 @@
 		045CF02D26FB69DD0034F747 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = InfraTests/Info.plist;
