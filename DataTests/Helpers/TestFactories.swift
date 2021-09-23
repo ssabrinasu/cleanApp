@@ -7,6 +7,10 @@
 
 import Foundation
 
+func makeEmptyData() -> Data {
+    return Data()
+}
+
 func makeInvalidData() -> Data {
     return Data("Invalid_data".utf8)
 }

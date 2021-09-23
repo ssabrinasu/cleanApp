@@ -25,6 +25,10 @@
 		04545E9D26FA6FA5001E05E1 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E9C26FA6FA5001E05E1 /* TestFactories.swift */; };
 		04545EA126FA7013001E05E1 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545EA026FA7013001E05E1 /* HttpClientSpy.swift */; };
 		04545EA626FA70BD001E05E1 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545EA526FA70BD001E05E1 /* AccountModelFactory.swift */; };
+		0455782126FCC7AF00AF8FD9 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0415ACDF26F2706600194713 /* Data.framework */; };
+		0455782226FCC7AF00AF8FD9 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0415ACDF26F2706600194713 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0455782626FCC7B400AF8FD9 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0415ACCB26F26D0100194713 /* Domain.framework */; };
+		0455782726FCC7B400AF8FD9 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0415ACCB26F26D0100194713 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		045CF02226FB69DD0034F747 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045CF01926FB69DC0034F747 /* Infra.framework */; };
 		04FDFE9626F3A0F500A0EE98 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDFE9526F3A0F500A0EE98 /* Model.swift */; };
 		04FDFE9A26F3A18200A0EE98 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDFE9926F3A18200A0EE98 /* RemoteAddAccount.swift */; };
@@ -40,6 +44,20 @@
 			remoteInfo = Data;
 		};
 		0415ACFF26F270D000194713 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0415ACB026F26C1900194713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0415ACCA26F26D0100194713;
+			remoteInfo = Domain;
+		};
+		0455782326FCC7AF00AF8FD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0415ACB026F26C1900194713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0415ACDE26F2706600194713;
+			remoteInfo = Data;
+		};
+		0455782826FCC7B400AF8FD9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0415ACB026F26C1900194713 /* Project object */;
 			proxyType = 1;
@@ -63,6 +81,18 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0415ACFE26F270D000194713 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0455782526FCC7AF00AF8FD9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0455782726FCC7B400AF8FD9 /* Domain.framework in Embed Frameworks */,
+				0455782226FCC7AF00AF8FD9 /* Data.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +154,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0455782626FCC7B400AF8FD9 /* Domain.framework in Frameworks */,
+				0455782126FCC7AF00AF8FD9 /* Data.framework in Frameworks */,
 				0418257326FB6E1F0043D26A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,10 +420,13 @@
 				045CF01526FB69DC0034F747 /* Sources */,
 				045CF01626FB69DC0034F747 /* Frameworks */,
 				045CF01726FB69DC0034F747 /* Resources */,
+				0455782526FCC7AF00AF8FD9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0455782426FCC7AF00AF8FD9 /* PBXTargetDependency */,
+				0455782926FCC7B400AF8FD9 /* PBXTargetDependency */,
 			);
 			name = Infra;
 			packageProductDependencies = (
@@ -576,6 +611,16 @@
 			isa = PBXTargetDependency;
 			target = 0415ACCA26F26D0100194713 /* Domain */;
 			targetProxy = 0415ACFF26F270D000194713 /* PBXContainerItemProxy */;
+		};
+		0455782426FCC7AF00AF8FD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0415ACDE26F2706600194713 /* Data */;
+			targetProxy = 0455782326FCC7AF00AF8FD9 /* PBXContainerItemProxy */;
+		};
+		0455782926FCC7B400AF8FD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0415ACCA26F26D0100194713 /* Domain */;
+			targetProxy = 0455782826FCC7B400AF8FD9 /* PBXContainerItemProxy */;
 		};
 		045CF02426FB69DD0034F747 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
