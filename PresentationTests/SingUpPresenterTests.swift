@@ -39,8 +39,7 @@ struct SingUpViewModel {
 
 class SingUpPresenterTests: XCTestCase {
     func test_singUp() {
-        let alertViewSpy = AlertViewSpy()
-        let sut = SingUpPresenter(alertView: alertViewSpy)
+        let (sut, alertViewSpy) = makeSut()
         let singUpViewModel = SingUpViewModel(email: "any@email.com", password: "any12345", passwordConfiemation: "any12345")
         sut.singUp(viewModel: singUpViewModel)
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validacao", message: "O campo Nome e obrigatorio"))
@@ -48,6 +47,12 @@ class SingUpPresenterTests: XCTestCase {
 }
 
 extension SingUpPresenterTests {
+    func makeSut() -> (sut: SingUpPresenter, AlertViewSpy: AlertViewSpy) {
+        let alertViewSpy = AlertViewSpy()
+        let sut = SingUpPresenter(alertView: alertViewSpy)
+        return (sut, alertViewSpy)
+    }
+    
     class AlertViewSpy: AlertView {
         var viewModel: AlertViewModel?
         
