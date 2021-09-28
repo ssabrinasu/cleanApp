@@ -30,6 +30,8 @@ public class SingUpPresenter {
             return "O campo Senha é obrigatorio"
         } else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
             return "O campo Confirmar Senha é obrigatorio"
+        } else if viewModel.password != viewModel.passwordConfirmation {
+            return "Falha ao confirmar senha"
         }
         return nil
     }
