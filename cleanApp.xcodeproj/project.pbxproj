@@ -38,6 +38,7 @@
 		045CF02226FB69DD0034F747 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045CF01926FB69DC0034F747 /* Infra.framework */; };
 		0469074D2702A1A10039E740 /* SingUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469074C2702A1A10039E740 /* SingUpPresenter.swift */; };
 		046907582702A2640039E740 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046907572702A2640039E740 /* AlertView.swift */; };
+		046907752702A9530039E740 /* EmailValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046907742702A9530039E740 /* EmailValidators.swift */; };
 		04FDFE9626F3A0F500A0EE98 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDFE9526F3A0F500A0EE98 /* Model.swift */; };
 		04FDFE9A26F3A18200A0EE98 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDFE9926F3A18200A0EE98 /* RemoteAddAccount.swift */; };
 		04FDFE9E26F3A20A00A0EE98 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDFE9D26F3A20A00A0EE98 /* HttpPostClient.swift */; };
@@ -176,6 +177,7 @@
 		045CF02826FB69DD0034F747 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0469074C2702A1A10039E740 /* SingUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpPresenter.swift; sourceTree = "<group>"; };
 		046907572702A2640039E740 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		046907742702A9530039E740 /* EmailValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidators.swift; sourceTree = "<group>"; };
 		04FDFE9526F3A0F500A0EE98 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		04FDFE9926F3A18200A0EE98 /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
 		04FDFE9D26F3A20A00A0EE98 /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 		042F988526FEAE8300B2742D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				046907732702A9290039E740 /* Validators */,
 				0469075F2702A2900039E740 /* Pressenter */,
 				046907562702A2510039E740 /* View */,
 				042F988726FEAE8300B2742D /* Info.plist */,
@@ -439,6 +442,14 @@
 				042F98A126FEAEEE00B2742D /* SingUpPresenterTests.swift */,
 			);
 			path = Pressenter;
+			sourceTree = "<group>";
+		};
+		046907732702A9290039E740 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				046907742702A9530039E740 /* EmailValidators.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 		04FDFEA326F3A26B00A0EE98 /* UseCases */ = {
@@ -840,6 +851,7 @@
 			files = (
 				0469074D2702A1A10039E740 /* SingUpPresenter.swift in Sources */,
 				046907582702A2640039E740 /* AlertView.swift in Sources */,
+				046907752702A9530039E740 /* EmailValidators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

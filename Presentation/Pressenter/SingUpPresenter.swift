@@ -7,11 +7,13 @@
 
 import Foundation
 
-public class SingUpPresenter {
+public final class SingUpPresenter {
     private let alertView: AlertView
-    
-    public  init(alertView: AlertView) {
+    private let emailValidator: EmailValidator
+
+    public  init(alertView: AlertView, emailValidator: EmailValidator ) {
         self.alertView = alertView
+        self.emailValidator = emailValidator
     }
     
     public func singUp(viewModel: SingUpViewModel) {
@@ -32,6 +34,8 @@ public class SingUpPresenter {
             return "O campo Confirmar Senha é obrigatorio"
         } else if viewModel.password != viewModel.passwordConfirmation {
             return "Falha ao confirmar senha"
+        } else if !emailValidator.isValid(email: viewModel.email!) {
+            return "Email inválido"
         }
         return nil
     }
