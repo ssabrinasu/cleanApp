@@ -15,13 +15,23 @@ class SingUpPresenter {
     }
     
     func singUp(viewModel: SingUpViewModel) {
-        if viewModel.name == nil || viewModel.name!.isEmpty {
-            alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validacao", message: "O campo Nome e obrigatorio"))
-        } else if viewModel.email == nil || viewModel.email!.isEmpty {
-            alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validacao", message: "O campo Email e obrigatorio"))
-        } else if viewModel.password == nil || viewModel.password!.isEmpty {
-            alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validacao", message: "O campo Senha e obrigatorio"))
+        
+        if let message = validate(viewModel: viewModel) {
+            alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))
         }
+    }
+    
+    private func validate(viewModel: SingUpViewModel) -> String? {
+        if viewModel.name == nil || viewModel.name!.isEmpty {
+            return "O campo Nome é obrigatorio"
+        } else if viewModel.email == nil || viewModel.email!.isEmpty {
+            return "O campo Email é obrigatorio"
+        } else if viewModel.password == nil || viewModel.password!.isEmpty {
+            return "O campo Senha é obrigatorio"
+        } else if viewModel.passwordConfiemation == nil || viewModel.passwordConfiemation!.isEmpty {
+            return "O campo Confirmar Senha é obrigatorio"
+        }
+        return nil
     }
 }
 
@@ -46,21 +56,28 @@ class SingUpPresenterTests: XCTestCase {
         let (sut, alertViewSpy) = makeSut()
         let singUpViewModel = SingUpViewModel(email: "any@email.com", password: "any12345", passwordConfiemation: "any12345")
         sut.singUp(viewModel: singUpViewModel)
-        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validacao", message: "O campo Nome e obrigatorio"))
+        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validação", message: "O campo Nome é obrigatorio"))
     }
     
     func test_singUp_should_show_error_message_if_email_is_not_provided() {
         let (sut, alertViewSpy) = makeSut()
         let singUpViewModel = SingUpViewModel(name: "Any Name", password: "any12345", passwordConfiemation: "any12345")
         sut.singUp(viewModel: singUpViewModel)
-        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validacao", message: "O campo Email e obrigatorio"))
+        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validação", message: "O campo Email é obrigatorio"))
     }
     
     func test_singUp_should_show_error_message_if_password_is_not_provided() {
         let (sut, alertViewSpy) = makeSut()
-        let singUpViewModel = SingUpViewModel(name: "Any Name", email: "any@email.com")
+        let singUpViewModel = SingUpViewModel(name: "Any Name", email: "any@email.com", passwordConfiemation: "any12345")
         sut.singUp(viewModel: singUpViewModel)
-        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validacao", message: "O campo Senha e obrigatorio"))
+        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validação", message: "O campo Senha é obrigatorio"))
+    }
+    
+    func test_singUp_should_show_error_message_if_password_confirmation_is_not_provided() {
+        let (sut, alertViewSpy) = makeSut()
+        let singUpViewModel = SingUpViewModel(name: "Any Name", email: "any@email.com", password: "any12345")
+        sut.singUp(viewModel: singUpViewModel)
+        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validação", message: "O campo Confirmar Senha é obrigatorio"))
     }
 }
 
