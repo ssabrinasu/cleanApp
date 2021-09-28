@@ -36,6 +36,8 @@
 		0455786326FCFC3C00AF8FD9 /* UseCasesIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0455786226FCFC3C00AF8FD9 /* UseCasesIntegrationTests.swift */; };
 		0455786526FCFC3C00AF8FD9 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0415ACCB26F26D0100194713 /* Domain.framework */; };
 		045CF02226FB69DD0034F747 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045CF01926FB69DC0034F747 /* Infra.framework */; };
+		0469074D2702A1A10039E740 /* SingUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469074C2702A1A10039E740 /* SingUpPresenter.swift */; };
+		046907582702A2640039E740 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046907572702A2640039E740 /* AlertView.swift */; };
 		04FDFE9626F3A0F500A0EE98 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDFE9526F3A0F500A0EE98 /* Model.swift */; };
 		04FDFE9A26F3A18200A0EE98 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDFE9926F3A18200A0EE98 /* RemoteAddAccount.swift */; };
 		04FDFE9E26F3A20A00A0EE98 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDFE9D26F3A20A00A0EE98 /* HttpPostClient.swift */; };
@@ -105,6 +107,13 @@
 			remoteGlobalIDString = 045CF01826FB69DC0034F747;
 			remoteInfo = Infra;
 		};
+		046907542702A1C60039E740 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0415ACB026F26C1900194713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0415ACCA26F26D0100194713;
+			remoteInfo = Domain;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -165,6 +174,8 @@
 		045CF01C26FB69DC0034F747 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045CF02126FB69DD0034F747 /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		045CF02826FB69DD0034F747 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0469074C2702A1A10039E740 /* SingUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpPresenter.swift; sourceTree = "<group>"; };
+		046907572702A2640039E740 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		04FDFE9526F3A0F500A0EE98 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		04FDFE9926F3A18200A0EE98 /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
 		04FDFE9D26F3A20A00A0EE98 /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
@@ -312,6 +323,8 @@
 		042F988526FEAE8300B2742D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0469075F2702A2900039E740 /* Pressenter */,
+				046907562702A2510039E740 /* View */,
 				042F988726FEAE8300B2742D /* Info.plist */,
 			);
 			path = Presentation;
@@ -320,7 +333,7 @@
 		042F989026FEAE8400B2742D /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
-				042F98A126FEAEEE00B2742D /* SingUpPresenterTests.swift */,
+				046907662702A4E70039E740 /* Pressenter */,
 				042F989326FEAE8400B2742D /* Info.plist */,
 			);
 			path = PresentationTests;
@@ -402,6 +415,30 @@
 				045CF02826FB69DD0034F747 /* Info.plist */,
 			);
 			path = InfraTests;
+			sourceTree = "<group>";
+		};
+		046907562702A2510039E740 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				046907572702A2640039E740 /* AlertView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0469075F2702A2900039E740 /* Pressenter */ = {
+			isa = PBXGroup;
+			children = (
+				0469074C2702A1A10039E740 /* SingUpPresenter.swift */,
+			);
+			path = Pressenter;
+			sourceTree = "<group>";
+		};
+		046907662702A4E70039E740 /* Pressenter */ = {
+			isa = PBXGroup;
+			children = (
+				042F98A126FEAEEE00B2742D /* SingUpPresenterTests.swift */,
+			);
+			path = Pressenter;
 			sourceTree = "<group>";
 		};
 		04FDFEA326F3A26B00A0EE98 /* UseCases */ = {
@@ -548,6 +585,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				046907552702A1C60039E740 /* PBXTargetDependency */,
 			);
 			name = Presentation;
 			productName = Presentation;
@@ -657,6 +695,7 @@
 					};
 					042F988326FEAE8300B2742D = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					042F988B26FEAE8400B2742D = {
 						CreatedOnToolsVersion = 12.2;
@@ -799,6 +838,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0469074D2702A1A10039E740 /* SingUpPresenter.swift in Sources */,
+				046907582702A2640039E740 /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -885,6 +926,11 @@
 			isa = PBXTargetDependency;
 			target = 045CF01826FB69DC0034F747 /* Infra */;
 			targetProxy = 045CF02326FB69DD0034F747 /* PBXContainerItemProxy */;
+		};
+		046907552702A1C60039E740 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0415ACCA26F26D0100194713 /* Domain */;
+			targetProxy = 046907542702A1C60039E740 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1163,6 +1209,7 @@
 		042F989526FEAE8400B2742D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1181,6 +1228,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1188,6 +1236,7 @@
 		042F989626FEAE8400B2742D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1213,6 +1262,7 @@
 		042F989726FEAE8400B2742D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PresentationTests/Info.plist;
@@ -1232,6 +1282,7 @@
 		042F989826FEAE8400B2742D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PresentationTests/Info.plist;
