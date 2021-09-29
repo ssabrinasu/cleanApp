@@ -27,7 +27,7 @@ public final class SingUpPresenter {
             let addAccountModel = AddAccountModel(name: viewModel.name!, email: viewModel.email!, password: viewModel.password!, passwordConfiemation: viewModel.passwordConfirmation!)
             addAccount.add(addAccountModel: addAccountModel) { result in
                 switch result {
-                case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Algo inesperado aconteceu tente novamente em instantes"))
+                case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Algo inesperado aconteceu tente novamente em instantes"))
                 case .success: break
                 }
             }
