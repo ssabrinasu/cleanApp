@@ -23,6 +23,8 @@
 		043F2F722704BB6E003F82CD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2F712704BB6E003F82CD /* LoadingView.swift */; };
 		043F2F8B2704C11C003F82CD /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E9826FA6EE2001E05E1 /* TextExtensions.swift */; };
 		043F2F9F2704C123003F82CD /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E9826FA6EE2001E05E1 /* TextExtensions.swift */; };
+		043F2FA82704E457003F82CD /* SingUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FA72704E457003F82CD /* SingUpViewModel.swift */; };
+		043F2FB62704E4DC003F82CD /* SingUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FB52704E4DC003F82CD /* SingUpMapper.swift */; };
 		0448950D2703972C00AB2306 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545EA526FA70BD001E05E1 /* AccountModelFactory.swift */; };
 		04545E8526F4E029001E05E1 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E8426F4E029001E05E1 /* DomainError.swift */; };
 		04545E8B26F4F241001E05E1 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E8A26F4F241001E05E1 /* HttpError.swift */; };
@@ -164,6 +166,8 @@
 		042F989326FEAE8400B2742D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042F98A126FEAEEE00B2742D /* SingUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpPresenterTests.swift; sourceTree = "<group>"; };
 		043F2F712704BB6E003F82CD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		043F2FA72704E457003F82CD /* SingUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewModel.swift; sourceTree = "<group>"; };
+		043F2FB52704E4DC003F82CD /* SingUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpMapper.swift; sourceTree = "<group>"; };
 		04545E8426F4E029001E05E1 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		04545E8A26F4F241001E05E1 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		04545E9126F8E13D001E05E1 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
@@ -347,6 +351,16 @@
 			path = PresentationTests;
 			sourceTree = "<group>";
 		};
+		043F2FA62704E426003F82CD /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				0469074C2702A1A10039E740 /* SingUpPresenter.swift */,
+				043F2FA72704E457003F82CD /* SingUpViewModel.swift */,
+				043F2FB52704E4DC003F82CD /* SingUpMapper.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		04545E8326F4E019001E05E1 /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,7 +451,7 @@
 		0469075F2702A2900039E740 /* Pressenter */ = {
 			isa = PBXGroup;
 			children = (
-				0469074C2702A1A10039E740 /* SingUpPresenter.swift */,
+				043F2FA62704E426003F82CD /* SignUp */,
 			);
 			path = Pressenter;
 			sourceTree = "<group>";
@@ -855,9 +869,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043F2FA82704E457003F82CD /* SingUpViewModel.swift in Sources */,
 				0469074D2702A1A10039E740 /* SingUpPresenter.swift in Sources */,
 				043F2F722704BB6E003F82CD /* LoadingView.swift in Sources */,
 				046907582702A2640039E740 /* AlertView.swift in Sources */,
+				043F2FB62704E4DC003F82CD /* SingUpMapper.swift in Sources */,
 				046907752702A9530039E740 /* EmailValidators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
