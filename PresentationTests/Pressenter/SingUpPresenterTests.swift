@@ -107,13 +107,20 @@ class SingUpPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     
     }
+    
+    func test_singUp_should_show_loading_before_call_addAcount() {
+        let loadingViewSpy = LoadingViewSpy()
+        let sut = makeSut(loadingView: loadingViewSpy)
+        sut.singUp(viewModel: makeSingUpViewModel())
+        XCTAssertEqual(loadingViewSpy.viewModel, LoadingViewModel(isLoading: true))
+    }
 
 }
 
 extension SingUpPresenterTests {
-    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy(), file: StaticString = #filePath, line: UInt = #line) -> SingUpPresenter {
-        let sut = SingUpPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount)
-        checkMemoryLeak(for: sut, file: file, line: line)
+    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy(), loadingView: LoadingViewSpy = LoadingViewSpy(), file: StaticString = #filePath, line: UInt = #line) -> SingUpPresenter {
+        let sut = SingUpPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount, loadingView: loadingView)
+        //checkMemoryLeak(for: sut, file: file, line: line)
         return sut
     }
     
@@ -170,6 +177,14 @@ extension SingUpPresenterTests {
         
         func completedWithError(_ error: DomainError) {
             completion?(.failure(error))
+        }
+    }
+    
+    class LoadingViewSpy: LoadingView {
+        var viewModel: LoadingViewModel?
+        
+        func display(viewModel: LoadingViewModel) {
+            self.viewModel = viewModel
         }
     }
 }
