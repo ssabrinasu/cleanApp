@@ -21,7 +21,7 @@ class SingUpPresenterTests: XCTestCase {
             exp.fulfill()
         }
         sut.singUp(viewModel: singUpViewModel)
-        wait(for: [exp], timeout: 1) 
+        wait(for: [exp], timeout: 1)
     }
     
     func test_singUp_should_show_error_message_if_email_is_not_provided() {
@@ -111,8 +111,9 @@ class SingUpPresenterTests: XCTestCase {
 }
 
 extension SingUpPresenterTests {
-    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy()) -> SingUpPresenter {
+    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy(), file: StaticString = #filePath, line: UInt = #line) -> SingUpPresenter {
         let sut = SingUpPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount)
+        checkMemoryLeak(for: sut, file: file, line: line)
         return sut
     }
     
