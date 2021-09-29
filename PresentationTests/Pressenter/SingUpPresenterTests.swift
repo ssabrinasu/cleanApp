@@ -7,6 +7,7 @@
 
 import XCTest
 import Presentation
+import Domain
 
 class SingUpPresenterTests: XCTestCase {
     func test_singUp_should_show_error_message_if_name_is_not_provided() {
@@ -59,16 +60,31 @@ class SingUpPresenterTests: XCTestCase {
         XCTAssertEqual(emailValidatorSpy.email, singUpViewModel.email)
     }
     
+    func test_singUp_should_call_addAccount_with_correct_values() {
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSut(addAccount: addAccountSpy)
+        sut.singUp(viewModel: makeSingUpViewModel())
+        XCTAssertEqual(addAccountSpy.addAccountModel, makeAddAccountModel())
+    }
     
+    func test_singUp_should_show_error_message_if_addAccount_fails() {
+        let alertViewSpy = AlertViewSpy()
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSut(alertView: alertViewSpy, addAccount: addAccountSpy)
+        sut.singUp(viewModel: makeSingUpViewModel())
+        addAccountSpy.completedWithError(.unexpected)
+        XCTAssertEqual(alertViewSpy.viewModel, makeErrorAlertViewModel(message: "Algo inesperado aconteceu tente novamente em instantes"))
+    }
+
 }
 
 extension SingUpPresenterTests {
-    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy()) -> SingUpPresenter {
-        let sut = SingUpPresenter(alertView: alertView, emailValidator: emailValidator)
+    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy()) -> SingUpPresenter {
+        let sut = SingUpPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount)
         return sut
     }
     
-    func makeSingUpViewModel(name: String? = "Any Name", email: String? = "any@email.com", password: String? = "any12345", passwordConfirmation: String? = "any12345") -> SingUpViewModel {
+    func makeSingUpViewModel(name: String? = "any name", email: String? = "anyname@gmail.com", password: String? = "12345", passwordConfirmation: String? = "12345") -> SingUpViewModel {
         return SingUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
         
     }
@@ -79,6 +95,10 @@ extension SingUpPresenterTests {
     
     func makeInvalidAlertViewModel(fieldName: String) -> AlertViewModel {
         return AlertViewModel(title: "Falha na validação", message: "O campo \(fieldName) é inválido")
+    }
+    
+    func makeErrorAlertViewModel(message: String) -> AlertViewModel {
+        return AlertViewModel(title: "Error", message: message)
     }
     
     class AlertViewSpy: AlertView {
@@ -102,4 +122,18 @@ extension SingUpPresenterTests {
                isValid = false
            }
        }
+    
+    class AddAccountSpy: AddAccount {
+        var addAccountModel: AddAccountModel?
+        var completion: ((Result<AccountModel, DomainError>) -> Void)?
+        
+        func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
+            self.addAccountModel = addAccountModel
+            self.completion = completion
+        }
+        
+        func completedWithError(_ error: DomainError) {
+            completion?(.failure(error))
+        }
+    }
 }
