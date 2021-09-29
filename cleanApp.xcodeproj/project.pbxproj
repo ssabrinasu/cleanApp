@@ -21,6 +21,8 @@
 		042F988D26FEAE8400B2742D /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042F988426FEAE8300B2742D /* Presentation.framework */; };
 		042F98A226FEAEEE00B2742D /* SingUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F98A126FEAEEE00B2742D /* SingUpPresenterTests.swift */; };
 		043F2F722704BB6E003F82CD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2F712704BB6E003F82CD /* LoadingView.swift */; };
+		043F2F8B2704C11C003F82CD /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E9826FA6EE2001E05E1 /* TextExtensions.swift */; };
+		043F2F9F2704C123003F82CD /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E9826FA6EE2001E05E1 /* TextExtensions.swift */; };
 		0448950D2703972C00AB2306 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545EA526FA70BD001E05E1 /* AccountModelFactory.swift */; };
 		04545E8526F4E029001E05E1 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E8426F4E029001E05E1 /* DomainError.swift */; };
 		04545E8B26F4F241001E05E1 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E8A26F4F241001E05E1 /* HttpError.swift */; };
@@ -865,6 +867,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0448950D2703972C00AB2306 /* AccountModelFactory.swift in Sources */,
+				043F2F8B2704C11C003F82CD /* TextExtensions.swift in Sources */,
 				042F98A226FEAEEE00B2742D /* SingUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -873,6 +876,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043F2F9F2704C123003F82CD /* TextExtensions.swift in Sources */,
 				0455786326FCFC3C00AF8FD9 /* UseCasesIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

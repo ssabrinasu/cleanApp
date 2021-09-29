@@ -108,19 +108,47 @@ class SingUpPresenterTests: XCTestCase {
     
     }
     
-    func test_singUp_should_show_loading_before_call_addAcount() {
-        let loadingViewSpy = LoadingViewSpy()
-        let sut = makeSut(loadingView: loadingViewSpy)
+    func test_singUp_should_show_success_message_if_addAccount_succeds() {
+        let alertViewSpy = AlertViewSpy()
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSut(alertView: alertViewSpy, addAccount: addAccountSpy)
+        let exp = expectation(description: "waiting")
+        alertViewSpy.observe { [weak self] viewModel in
+            XCTAssertEqual(viewModel, self?.makeSuccessAlertViewModel(message: "Conta criada com sucesso"))
+            exp.fulfill()
+        }
         sut.singUp(viewModel: makeSingUpViewModel())
-        XCTAssertEqual(loadingViewSpy.viewModel, LoadingViewModel(isLoading: true))
+        addAccountSpy.completedWithAccout(makeAccountModel())
+        wait(for: [exp], timeout: 1)
+    
     }
-
+    
+    func test_singUp_should_show_loading_before_and_after_addAcount() {
+        let loadingViewSpy = LoadingViewSpy()
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSut(addAccount: addAccountSpy, loadingView: loadingViewSpy)
+        let exp = expectation(description: "waiting")
+        loadingViewSpy.observe { viewModel in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
+            exp.fulfill()
+        }
+        sut.singUp(viewModel: makeSingUpViewModel())
+        wait(for: [exp], timeout: 1)
+        
+        let exp2 = expectation(description: "waiting")
+        loadingViewSpy.observe { viewModel in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: false))
+            exp2.fulfill()
+        }
+        addAccountSpy.completedWithError(.unexpected)
+        wait(for: [exp2], timeout: 1)
+    }
 }
 
 extension SingUpPresenterTests {
     func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy(), loadingView: LoadingViewSpy = LoadingViewSpy(), file: StaticString = #filePath, line: UInt = #line) -> SingUpPresenter {
         let sut = SingUpPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount, loadingView: loadingView)
-        //checkMemoryLeak(for: sut, file: file, line: line)
+        checkMemoryLeak(for: sut, file: file, line: line)
         return sut
     }
     
@@ -139,6 +167,10 @@ extension SingUpPresenterTests {
     
     func makeErrorAlertViewModel(message: String) -> AlertViewModel {
         return AlertViewModel(title: "Error", message: message)
+    }
+    
+    func makeSuccessAlertViewModel(message: String) -> AlertViewModel {
+        return AlertViewModel(title: "Sucesso", message: message)
     }
     
     class AlertViewSpy: AlertView {
@@ -178,13 +210,21 @@ extension SingUpPresenterTests {
         func completedWithError(_ error: DomainError) {
             completion?(.failure(error))
         }
+        
+        func completedWithAccout(_ account: AccountModel) {
+            completion?(.success(account))
+        }
     }
     
     class LoadingViewSpy: LoadingView {
-        var viewModel: LoadingViewModel?
+        var emit: ((LoadingViewModel) -> Void)?
+        
+        func observe(completion: @escaping (LoadingViewModel) -> Void) {
+            self.emit = completion
+        }
         
         func display(viewModel: LoadingViewModel) {
-            self.viewModel = viewModel
+            self.emit?(viewModel)
         }
     }
 }
