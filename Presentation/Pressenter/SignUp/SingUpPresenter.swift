@@ -12,11 +12,14 @@ public final class SingUpPresenter {
     private let alertView: AlertView
     private let emailValidator: EmailValidator
     private let addAccount: AddAccount
+    private let loadingView: LoadingView
+    
 
-    public  init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount ) {
+    public  init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount, loadingView: LoadingView) {
         self.alertView = alertView
         self.emailValidator = emailValidator
         self.addAccount = addAccount
+        self.loadingView = loadingView
     }
     
     public func singUp(viewModel: SingUpViewModel) {
@@ -24,13 +27,14 @@ public final class SingUpPresenter {
         if let message = validate(viewModel: viewModel) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))
         } else {
-            let addAccountModel = AddAccountModel(name: viewModel.name!, email: viewModel.email!, password: viewModel.password!, passwordConfiemation: viewModel.passwordConfirmation!)
-            addAccount.add(addAccountModel: addAccountModel) { [weak self] result in
+            loadingView.display(viewModel: LoadingViewModel(isLoading: true))
+            addAccount.add(addAccountModel: SingUpMapper.toAddAccountModel(viewModel: viewModel)) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
                 case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Algo inesperado aconteceu tente novamente em instantes"))
-                case .success: break
+                case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso"))
                 }
+                self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             }
         }
     }
@@ -53,16 +57,4 @@ public final class SingUpPresenter {
     }
 }
 
-public struct SingUpViewModel {
-    public var name: String?
-    public var email: String?
-    public var password: String?
-    public var passwordConfirmation: String?
-    
-    public init (name: String? = nil, email: String? = nil, password: String? = nil, passwordConfirmation: String? = nil) {
-        self.name = name
-        self.email = email
-        self.password = password
-        self.passwordConfirmation = passwordConfirmation
-    }
-}
+
