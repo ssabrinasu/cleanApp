@@ -9,7 +9,8 @@ import XCTest
 
 class EmailValidatorAdapter: XCTestCase {
 
-    func testExample() {
+    func test_invalid_emails() {
+        let sut = ema
      
     }
 }
