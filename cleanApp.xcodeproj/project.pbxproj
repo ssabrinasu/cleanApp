@@ -32,6 +32,8 @@
 		043F2FF42704E95D003F82CD /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FF32704E95D003F82CD /* TestFactories.swift */; };
 		043F300F2705E970003F82CD /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043F30062705E970003F82CD /* UI.framework */; };
 		043F30502705EA0B003F82CD /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F304F2705EA0B003F82CD /* SignUpViewControllerTests.swift */; };
+		043F30722705EF65003F82CD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F30712705EF65003F82CD /* SignUpViewController.swift */; };
+		043F307C2705EFBF003F82CD /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043F307B2705EFBF003F82CD /* SignUp.storyboard */; };
 		0448950D2703972C00AB2306 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545EA526FA70BD001E05E1 /* AccountModelFactory.swift */; };
 		04545E8526F4E029001E05E1 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E8426F4E029001E05E1 /* DomainError.swift */; };
 		04545E8B26F4F241001E05E1 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E8A26F4F241001E05E1 /* HttpError.swift */; };
@@ -192,6 +194,8 @@
 		043F300E2705E970003F82CD /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		043F30152705E970003F82CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043F304F2705EA0B003F82CD /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
+		043F30712705EF65003F82CD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		043F307B2705EFBF003F82CD /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		04545E8426F4E029001E05E1 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		04545E8A26F4F241001E05E1 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		04545E9126F8E13D001E05E1 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
@@ -444,7 +448,9 @@
 		043F30072705E970003F82CD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				043F30712705EF65003F82CD /* SignUpViewController.swift */,
 				043F30092705E970003F82CD /* Info.plist */,
+				043F307B2705EFBF003F82CD /* SignUp.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -873,6 +879,7 @@
 					};
 					043F30052705E970003F82CD = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					043F300D2705E970003F82CD = {
 						CreatedOnToolsVersion = 12.2;
@@ -960,6 +967,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043F307C2705EFBF003F82CD /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1060,6 +1068,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043F30722705EF65003F82CD /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1538,6 +1547,7 @@
 		043F30172705E970003F82CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1557,6 +1567,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1564,6 +1575,7 @@
 		043F30182705E970003F82CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1590,6 +1602,7 @@
 		043F30192705E970003F82CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1612,6 +1625,7 @@
 		043F301A2705E970003F82CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
