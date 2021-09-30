@@ -35,6 +35,8 @@
 		043F30722705EF65003F82CD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F30712705EF65003F82CD /* SignUpViewController.swift */; };
 		043F307C2705EFBF003F82CD /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043F307B2705EFBF003F82CD /* SignUp.storyboard */; };
 		043F30AF27062932003F82CD /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F30AE27062932003F82CD /* TestExtensions.swift */; };
+		043F30D227064069003F82CD /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F30D127064069003F82CD /* UIViewControllerExtensions.swift */; };
+		043F30E427064267003F82CD /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F30E327064266003F82CD /* Storyboard.swift */; };
 		0448950D2703972C00AB2306 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545EA526FA70BD001E05E1 /* AccountModelFactory.swift */; };
 		04545E8526F4E029001E05E1 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E8426F4E029001E05E1 /* DomainError.swift */; };
 		04545E8B26F4F241001E05E1 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E8A26F4F241001E05E1 /* HttpError.swift */; };
@@ -205,6 +207,8 @@
 		043F30712705EF65003F82CD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		043F307B2705EFBF003F82CD /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		043F30AE27062932003F82CD /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		043F30D127064069003F82CD /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		043F30E327064266003F82CD /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		04545E8426F4E029001E05E1 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		04545E8A26F4F241001E05E1 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		04545E9126F8E13D001E05E1 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
@@ -457,6 +461,7 @@
 		043F30072705E970003F82CD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				043F30D027064034003F82CD /* Helpers */,
 				043F30AA2706289E003F82CD /* Scenes */,
 				043F30092705E970003F82CD /* Info.plist */,
 			);
@@ -510,6 +515,15 @@
 			isa = PBXGroup;
 			children = (
 				043F30AE27062932003F82CD /* TestExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		043F30D027064034003F82CD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				043F30D127064069003F82CD /* UIViewControllerExtensions.swift */,
+				043F30E327064266003F82CD /* Storyboard.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1119,6 +1133,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043F30D227064069003F82CD /* UIViewControllerExtensions.swift in Sources */,
+				043F30E427064267003F82CD /* Storyboard.swift in Sources */,
 				043F30722705EF65003F82CD /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

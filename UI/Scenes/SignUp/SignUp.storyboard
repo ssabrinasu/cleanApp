@@ -16,15 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qD3-6b-TC1">
-                                <rect key="frame" x="45" y="553" width="324" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Cadastrar">
-                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                </state>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☕︎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxA-Qa-ai8">
+                                <rect key="frame" x="159" y="66" width="96" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="DVQ-jy-fg4"/>
+                                    <constraint firstAttribute="height" constant="75" id="zPF-cE-e2o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fav Lang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uf-O8-58v">
+                                <rect key="frame" x="148.5" y="156" width="117" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XbW-H7-e0e">
                                 <rect key="frame" x="40" y="240" width="334" height="50"/>
                                 <constraints>
@@ -58,32 +65,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="76m-Ga-iLd">
-                                <rect key="frame" x="189" y="683" width="37" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qD3-6b-TC1">
+                                <rect key="frame" x="45" y="552" width="324" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Cadastrar">
+                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="76m-Ga-iLd">
+                                <rect key="frame" x="332" y="559" width="37" height="37"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☕︎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxA-Qa-ai8">
-                                <rect key="frame" x="159" y="66" width="96" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="DVQ-jy-fg4"/>
-                                    <constraint firstAttribute="height" constant="75" id="zPF-cE-e2o"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <color key="textColor" systemColor="systemIndigoColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fav Lang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uf-O8-58v">
-                                <rect key="frame" x="148.5" y="156" width="117" height="33"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <color key="textColor" systemColor="systemIndigoColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uO3-ef-b0G"/>
                         <color key="backgroundColor" red="0.10459844559585496" green="0.10459844559585496" blue="0.10459844559585496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RxA-Qa-ai8" firstAttribute="top" secondItem="uO3-ef-b0G" secondAttribute="top" constant="22" id="14v-8z-UhV"/>
                             <constraint firstItem="uO3-ef-b0G" firstAttribute="trailing" secondItem="CCU-Kn-5at" secondAttribute="trailing" constant="40" id="1dh-q6-ZQs"/>
+                            <constraint firstItem="76m-Ga-iLd" firstAttribute="top" secondItem="phU-NC-ArN" secondAttribute="bottom" constant="74" id="7ll-fx-nvn"/>
                             <constraint firstItem="4Py-kn-vfD" firstAttribute="top" secondItem="CCU-Kn-5at" secondAttribute="bottom" constant="15" id="E8m-un-LLZ"/>
                             <constraint firstItem="uO3-ef-b0G" firstAttribute="trailing" secondItem="4Py-kn-vfD" secondAttribute="trailing" constant="40" id="Jmr-Dg-XG8"/>
                             <constraint firstItem="CCU-Kn-5at" firstAttribute="leading" secondItem="uO3-ef-b0G" secondAttribute="leading" constant="40" id="JrU-po-VTX"/>
