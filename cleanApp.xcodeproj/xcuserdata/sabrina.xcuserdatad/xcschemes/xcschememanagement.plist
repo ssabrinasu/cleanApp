@@ -27,17 +27,17 @@
 		<key>Main.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>Presentation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 		<key>UI.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>7</integer>
 		</dict>
 		<key>UseCasesIntegrationTests.xcscheme_^#shared#^_</key>
 		<dict>
@@ -47,7 +47,7 @@
 		<key>Validation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>5</integer>
 		</dict>
 		<key>cleanApp.xcscheme_^#shared#^_</key>
 		<dict>
@@ -68,6 +68,21 @@
 			<true/>
 		</dict>
 		<key>0415ACE626F2706600194713</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0452CB30270740720007D6D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0452CB452707407A0007D6D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0452CB502707407A0007D6D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
