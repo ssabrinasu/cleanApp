@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Presentation
 import Validation
 
 class CompareFieldsValidationTests: XCTestCase {

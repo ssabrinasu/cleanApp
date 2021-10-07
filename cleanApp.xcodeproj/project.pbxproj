@@ -42,7 +42,6 @@
 		043F3159270648D8003F82CD /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 042F988426FEAE8300B2742D /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0448950D2703972C00AB2306 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545EA526FA70BD001E05E1 /* AccountModelFactory.swift */; };
 		044970B7270E0A7800F89BC5 /* RequiredFieldValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044970B6270E0A7800F89BC5 /* RequiredFieldValidationTests.swift */; };
-		044970C2270E0E1500F89BC5 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04499E01270C8260001EB5B6 /* Validation.swift */; };
 		044970D0270E1EAE00F89BC5 /* RequiredFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044970CF270E1EAE00F89BC5 /* RequiredFieldValidation.swift */; };
 		044970EF270E1FA500F89BC5 /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E9826FA6EE2001E05E1 /* TextExtensions.swift */; };
 		044970FD270E21A900F89BC5 /* CompareFieldsValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044970FC270E21A900F89BC5 /* CompareFieldsValidationTests.swift */; };
@@ -92,6 +91,9 @@
 		0455785226FCEFDF00AF8FD9 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0455785126FCEFDF00AF8FD9 /* UrlProtocolStub.swift */; };
 		0455786326FCFC3C00AF8FD9 /* UseCasesIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0455786226FCFC3C00AF8FD9 /* UseCasesIntegrationTests.swift */; };
 		0455786526FCFC3C00AF8FD9 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0415ACCB26F26D0100194713 /* Domain.framework */; };
+		045706E3270F332C00FC2DC3 /* ValidationComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045706E2270F332B00FC2DC3 /* ValidationComposite.swift */; };
+		045706F0270F341100FC2DC3 /* ValidationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045706EF270F341100FC2DC3 /* ValidationSpy.swift */; };
+		04570719270F589300FC2DC3 /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FD22704E7CE003F82CD /* EmailValidatorSpy.swift */; };
 		045CF02226FB69DD0034F747 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045CF01926FB69DC0034F747 /* Infra.framework */; };
 		0469074D2702A1A10039E740 /* SingUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469074C2702A1A10039E740 /* SingUpPresenter.swift */; };
 		046907582702A2640039E740 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046907572702A2640039E740 /* AlertView.swift */; };
@@ -411,6 +413,8 @@
 		0455786026FCFC3B00AF8FD9 /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0455786226FCFC3C00AF8FD9 /* UseCasesIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesIntegrationTests.swift; sourceTree = "<group>"; };
 		0455786426FCFC3C00AF8FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045706E2270F332B00FC2DC3 /* ValidationComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationComposite.swift; sourceTree = "<group>"; };
+		045706EF270F341100FC2DC3 /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
 		045CF01926FB69DC0034F747 /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		045CF01C26FB69DC0034F747 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045CF02126FB69DD0034F747 /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -792,8 +796,8 @@
 		043F30FE2706477E003F82CD /* ValidationTests */ = {
 			isa = PBXGroup;
 			children = (
-				044970FB270E212E00F89BC5 /* Validators */,
 				044970FA270E211F00F89BC5 /* Protocols */,
+				044970FB270E212E00F89BC5 /* Validators */,
 				043F31012706477E003F82CD /* Info.plist */,
 			);
 			path = ValidationTests;
@@ -813,6 +817,7 @@
 				044970CF270E1EAE00F89BC5 /* RequiredFieldValidation.swift */,
 				04497112270E222200F89BC5 /* CompareFieldsValidation.swift */,
 				0449712A270E42C700F89BC5 /* EmailValidation.swift */,
+				045706E2270F332B00FC2DC3 /* ValidationComposite.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -821,6 +826,7 @@
 			isa = PBXGroup;
 			children = (
 				043F2FD22704E7CE003F82CD /* EmailValidatorSpy.swift */,
+				045706EF270F341100FC2DC3 /* ValidationSpy.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1732,8 +1738,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0449712B270E42C700F89BC5 /* EmailValidation.swift in Sources */,
-				044970C2270E0E1500F89BC5 /* Validation.swift in Sources */,
 				04497113270E222200F89BC5 /* CompareFieldsValidation.swift in Sources */,
+				045706E3270F332C00FC2DC3 /* ValidationComposite.swift in Sources */,
 				044970D0270E1EAE00F89BC5 /* RequiredFieldValidation.swift in Sources */,
 				04499E2E270C8319001EB5B6 /* EmailValidators.swift in Sources */,
 			);
@@ -1746,6 +1752,7 @@
 				044970B7270E0A7800F89BC5 /* RequiredFieldValidationTests.swift in Sources */,
 				044970FD270E21A900F89BC5 /* CompareFieldsValidationTests.swift in Sources */,
 				04497137270E440500F89BC5 /* ValidationCompositeTests.swift in Sources */,
+				045706F0270F341100FC2DC3 /* ValidationSpy.swift in Sources */,
 				0449711F270E323B00F89BC5 /* EmailValidationTests.swift in Sources */,
 				044970EF270E1FA500F89BC5 /* TextExtensions.swift in Sources */,
 				04499E18270C82FC001EB5B6 /* EmailValidatorSpy.swift in Sources */,
@@ -1772,6 +1779,7 @@
 			files = (
 				0452CD112707A6040007D6D4 /* AddAccountSpy.swift in Sources */,
 				04B0CD3B270CB8EE00AE22E4 /* SignUpComposersTests.swift in Sources */,
+				04570719270F589300FC2DC3 /* EmailValidatorSpy.swift in Sources */,
 				04B0CD5A270CBE4000AE22E4 /* TestFactories.swift in Sources */,
 				0452CD272707A6440007D6D4 /* TextExtensions.swift in Sources */,
 			);

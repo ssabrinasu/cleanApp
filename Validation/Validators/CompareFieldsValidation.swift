@@ -8,7 +8,7 @@
 import Foundation
 import Presentation
 
-public final class CompareFieldsValidation: Validation {
+public final class CompareFieldsValidation: Validation, Equatable {
     
     private let fieldName: String
     private let fieldNameToCompare: String
@@ -26,5 +26,9 @@ public final class CompareFieldsValidation: Validation {
             return "O campo \(fieldLabel) e invalido"
         }
         return nil
+    }
+    
+    public static func == (lhs: CompareFieldsValidation, rhs: CompareFieldsValidation) -> Bool {
+        return lhs.fieldLabel == rhs.fieldLabel && lhs.fieldName == rhs.fieldName && lhs.fieldNameToCompare == rhs.fieldNameToCompare
     }
 }
