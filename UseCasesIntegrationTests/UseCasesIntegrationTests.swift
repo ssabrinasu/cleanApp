@@ -5,11 +5,11 @@
 //  Created by Sabrina on 23/09/21.
 //
 
-//import XCTest
-//import Data
-//import Infra
-//import Domain
-//
+import XCTest
+import Data
+import Infra
+import Domain
+
 //class AddAccountIntegrationTests: XCTestCase {
 //    func test_add_account() {
 //        let alamofireAdapter = AlamofireAdapter()
@@ -21,9 +21,7 @@
 //            switch result {
 //            case .failure: XCTFail("Expect success got \(result) instead")
 //            case .success(let account):
-//                XCTAssertNotNil(account.id)
-//                XCTAssertEqual(account.name, addAccountModel.name)
-//                XCTAssertEqual(account.email, addAccountModel.email)
+//                XCTAssertNotNil(account.accessToken)
 //            }
 //            exp.fulfill()
 //        }

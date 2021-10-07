@@ -23,7 +23,6 @@
 		043F2F8B2704C11C003F82CD /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E9826FA6EE2001E05E1 /* TextExtensions.swift */; };
 		043F2F9F2704C123003F82CD /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E9826FA6EE2001E05E1 /* TextExtensions.swift */; };
 		043F2FA82704E457003F82CD /* SingUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FA72704E457003F82CD /* SingUpViewModel.swift */; };
-		043F2FB62704E4DC003F82CD /* SingUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FB52704E4DC003F82CD /* SingUpMapper.swift */; };
 		043F2FC52704E77F003F82CD /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FC42704E77F003F82CD /* AlertViewSpy.swift */; };
 		043F2FDD2704E853003F82CD /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FDC2704E853003F82CD /* AddAccountSpy.swift */; };
 		043F2FEB2704E896003F82CD /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FEA2704E896003F82CD /* LoadingViewSpy.swift */; };
@@ -357,7 +356,6 @@
 		042F98A126FEAEEE00B2742D /* SingUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpPresenterTests.swift; sourceTree = "<group>"; };
 		043F2F712704BB6E003F82CD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		043F2FA72704E457003F82CD /* SingUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewModel.swift; sourceTree = "<group>"; };
-		043F2FB52704E4DC003F82CD /* SingUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpMapper.swift; sourceTree = "<group>"; };
 		043F2FC42704E77F003F82CD /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
 		043F2FD22704E7CE003F82CD /* EmailValidatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpy.swift; sourceTree = "<group>"; };
 		043F2FDC2704E853003F82CD /* AddAccountSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
@@ -675,7 +673,6 @@
 			children = (
 				0469074C2702A1A10039E740 /* SingUpPresenter.swift */,
 				043F2FA72704E457003F82CD /* SingUpViewModel.swift */,
-				043F2FB52704E4DC003F82CD /* SingUpMapper.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -1694,7 +1691,6 @@
 				0469074D2702A1A10039E740 /* SingUpPresenter.swift in Sources */,
 				043F2F722704BB6E003F82CD /* LoadingView.swift in Sources */,
 				046907582702A2640039E740 /* AlertView.swift in Sources */,
-				043F2FB62704E4DC003F82CD /* SingUpMapper.swift in Sources */,
 				04499E02270C8260001EB5B6 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
