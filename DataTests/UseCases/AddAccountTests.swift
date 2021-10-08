@@ -87,9 +87,4 @@ extension RemoteAddAccountTests {
         action()
         wait(for: [exp], timeout: 1)
     }
- 
-    func makeAccountModel() -> AccountModel {
-        return AccountModel(accessToken: "any_token")
-    }
- 
 }

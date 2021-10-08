@@ -9,16 +9,16 @@ import Foundation
 
 public protocol Authentication {
     typealias Result = Swift.Result<AccountModel, DomainError>
-    func add(authenticationModel: AddAccountModel, completion: @escaping (Result) -> Void)
+    func auth(authenticationModel: AddAccountModel, completion: @escaping (Result) -> Void)
 }
 
 public struct AuthenticationModel: Model {
-    public var name: String
     public var email: String
+    public var password: String
     
-    public init(name: String, email: String) {
-        self.name = name
+    public init(email: String, password: String) {
         self.email = email
+        self.password = password
     }
 }
 
