@@ -30,8 +30,8 @@ public final class RemoteAuthentication {
                 }
             case .failure(let error):
                 switch error {
-                case .forbidden:
-                    completion(.failure(.emailInUse))
+                case .unauthorized:
+                    completion(.failure(.expiredSession))
                 default:
                     completion(.failure(.unexpected))
                 }

@@ -9,23 +9,53 @@ import Domain
 import Data
 
 class RemoteAuthenticationTests: XCTestCase {
-    func test_Auth_should_call_httpClient_with_correct_url() {
+    func test_auth_should_call_httpClient_with_correct_url() {
         let url = makeUrl()
         let (sut, httClientSpy) = makeSut(url: url)
         sut.auth(authenticationtModel: makeAuthenticationtModel()) { _ in }
         XCTAssertEqual(httClientSpy.urls, [url])
     }
-    func test_Auth_should_call_httpClient_with_correct_data() {
+    func test_auth_should_call_httpClient_with_correct_data() {
         let (sut, httClientSpy) = makeSut()
         let authenticationtModel = makeAuthenticationtModel()
         sut.auth(authenticationtModel: authenticationtModel) { _ in }
         XCTAssertEqual(httClientSpy.data, authenticationtModel.toData())
     }
-    func test_add_should_comlete_with_error_if_client_completes_with_error() {
+    func test_auth_should_complete_with_error_if_client_completes_with_error() {
         let (sut, httClientSpy) = makeSut()
         expect(sut, comleteWith: .failure(.unexpected), when: {
             httClientSpy.completionWithError(.noConnectivity)
         })
+    }
+    func test_auth_should_complete_with_expired_session_error_if_client_completes_with_unauthorized() {
+        let (sut, httClientSpy) = makeSut()
+        expect(sut, comleteWith: .failure(.expiredSession), when: {
+            httClientSpy.completionWithError(.unauthorized)
+        })
+    }
+    func test_auth_should_complete_with_account_if_client_completes_with_valid_data() {
+        let (sut, httClientSpy) = makeSut()
+        let account = makeAccountModel()
+        expect(sut, comleteWith: .success(account), when: {
+            httClientSpy.completionWithData(account.toData()!)
+        })
+    }
+    
+    func test_auth_should_complete_with_error_if_client_completes_with_invalid_data() {
+        let (sut, httClientSpy) = makeSut()
+        expect(sut, comleteWith: .failure(.unexpected), when: {
+            httClientSpy.completionWithData(makeInvalidData())
+        })
+    }
+    
+    func test_auth_should_not_complete_if_sut_has_been_deallocated() {
+        let httClientSpy = HttpClientSpy()
+        var sut:  RemoteAuthentication? =  RemoteAuthentication(url: makeUrl(), HttpClient: httClientSpy)
+        var result: Authentication.Result?
+        sut?.auth(authenticationtModel: makeAuthenticationtModel()) { result = $0 }
+        sut = nil
+        httClientSpy.completionWithError(.noConnectivity)
+        XCTAssertNil(result)
     }
 }
 
