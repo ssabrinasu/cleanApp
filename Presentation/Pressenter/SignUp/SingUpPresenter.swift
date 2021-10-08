@@ -33,14 +33,19 @@ public final class SingUpPresenter {
                     guard let self = self else { return }
                     self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
                     switch result {
-                    case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Algo inesperado aconteceu tente novamente em instantes"))
+                    case .failure(let error):
+                        var errorMessage: String?
+                        switch error {
+                        case .emailInUse:
+                            errorMessage = "Esse e-mail ja esta em uso."
+                        default:
+                            errorMessage =  "Algo inesperado aconteceu tente novamente em instantes"
+                        }
+                        self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: errorMessage))
+                        
                     case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso"))
                     }
             }
         }
     }
 }
-
-
-
-

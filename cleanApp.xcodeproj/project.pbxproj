@@ -999,7 +999,7 @@
 		046907662702A4E70039E740 /* Pressenter */ = {
 			isa = PBXGroup;
 			children = (
-				042F98A126FEAEEE00B2742D /* SingUpPresenterTests.swift */,
+				04E6E61A27107D9200497103 /* SignUp */,
 			);
 			path = Pressenter;
 			sourceTree = "<group>";
@@ -1033,6 +1033,14 @@
 				04B0CD66270CD20400AE22E4 /* MainQueueDispatchDecorator.swift */,
 			);
 			path = Decorators;
+			sourceTree = "<group>";
+		};
+		04E6E61A27107D9200497103 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				042F98A126FEAEEE00B2742D /* SingUpPresenterTests.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		04FCAD152707ACD400FE557D /* Proxy */ = {
