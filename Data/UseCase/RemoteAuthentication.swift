@@ -18,8 +18,24 @@ public final class RemoteAuthentication {
         self.HttpClient = HttpClient
     }
     
-    public func auth(authenticationtModel: AuthenticationModel) {
-        HttpClient.post(to: url, with: authenticationtModel.toData()) { _ in }
-    }
+    public func auth(authenticationtModel: AuthenticationModel, completion: @escaping (Authentication.Result) -> Void) {
+        HttpClient.post(to: url, with: authenticationtModel.toData()) { [weak self] Result in
+            guard self != nil else { return }
+            switch Result {
+            case .success(let data):
+                if let model: AccountModel = data?.toModel() {
+                    completion(.success(model))
+                } else {
+                    completion(.failure(.unexpected))
+                }
+            case .failure(let error):
+                switch error {
+                case .forbidden:
+                    completion(.failure(.emailInUse))
+                default:
+                    completion(.failure(.unexpected))
+                }
+            }
+         }
+     }
 }
-
