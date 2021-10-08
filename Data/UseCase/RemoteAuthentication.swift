@@ -18,8 +18,8 @@ public final class RemoteAuthentication {
         self.HttpClient = HttpClient
     }
     
-    public func auth() {
-        HttpClient.post(to: url, with: nil) { _ in }
+    public func auth(authenticationtModel: AuthenticationModel) {
+        HttpClient.post(to: url, with: authenticationtModel.toData()) { _ in }
     }
 }
 

@@ -12,8 +12,14 @@ class RemoteAuthenticationTests: XCTestCase {
     func test_add_should_call_httpClient_with_correct_url() {
         let url = makeUrl()
         let (sut, httClientSpy) = makeSut(url: url)
-        sut.auth()
+        sut.auth(authenticationtModel: makeAuthenticationtModel())
         XCTAssertEqual(httClientSpy.urls, [url])
+    }
+    func test_add_should_call_httpClient_with_correct_data() {
+        let (sut, httClientSpy) = makeSut()
+        let authenticationtModel = makeAuthenticationtModel()
+        sut.auth(authenticationtModel: authenticationtModel)
+        XCTAssertEqual(httClientSpy.data, authenticationtModel.toData())
     }
 }
 
@@ -25,4 +31,4 @@ extension RemoteAuthenticationTests {
         checkMemoryLeak(for: sut, file: file, line: line)
         return (sut, httClientSpy)
     }
-}
+    
