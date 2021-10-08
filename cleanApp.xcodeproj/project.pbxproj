@@ -105,6 +105,11 @@
 		04E6E65A2710953F00497103 /* EmailValidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E6592710953F00497103 /* EmailValidatorAdapter.swift */; };
 		04E6E6662710960100497103 /* SignUpControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E6652710960100497103 /* SignUpControllerFactory.swift */; };
 		04E6E67C271096D100497103 /* SignUpFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E67B271096D100497103 /* SignUpFactoryTests.swift */; };
+		04E6E69327109E3000497103 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E6E69227109E3000497103 /* Images.xcassets */; };
+		04E6E69F2710B65700497103 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E69E2710B65700497103 /* UIColorExtensions.swift */; };
+		04E6E6AB2710B67A00497103 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E6AA2710B67A00497103 /* Colors.swift */; };
+		04E6E6B82710B81400497103 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E6B72710B81400497103 /* RoundedTextField.swift */; };
+		04E6E6CE2710B94900497103 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E6CD2710B94900497103 /* NavigationController.swift */; };
 		04FCAD172707AD2500FE557D /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCAD162707AD2500FE557D /* WeakVarProxy.swift */; };
 		04FCAD73270B769400FE557D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCAD72270B769400FE557D /* Environment.swift */; };
 		04FDFE9626F3A0F500A0EE98 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDFE9526F3A0F500A0EE98 /* Model.swift */; };
@@ -428,6 +433,11 @@
 		04E6E6592710953F00497103 /* EmailValidatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapter.swift; sourceTree = "<group>"; };
 		04E6E6652710960100497103 /* SignUpControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpControllerFactory.swift; sourceTree = "<group>"; };
 		04E6E67B271096D100497103 /* SignUpFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactoryTests.swift; sourceTree = "<group>"; };
+		04E6E69227109E3000497103 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		04E6E69E2710B65700497103 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		04E6E6AA2710B67A00497103 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		04E6E6B72710B81400497103 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		04E6E6CD2710B94900497103 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		04FCAD162707AD2500FE557D /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
 		04FCAD51270B3FEA00FE557D /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		04FCAD53270B408500FE557D /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -719,7 +729,9 @@
 		043F30072705E970003F82CD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				04E6E69127109E0B00497103 /* Resources */,
 				043F30D027064034003F82CD /* Helpers */,
+				04E6E6B62710B79C00497103 /* Components */,
 				043F30AA2706289E003F82CD /* Scenes */,
 				043F30092705E970003F82CD /* Info.plist */,
 			);
@@ -782,6 +794,8 @@
 			children = (
 				043F30D127064069003F82CD /* UIViewControllerExtensions.swift */,
 				043F30E327064266003F82CD /* Storyboard.swift */,
+				04E6E69E2710B65700497103 /* UIColorExtensions.swift */,
+				04E6E6AA2710B67A00497103 /* Colors.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1066,6 +1080,23 @@
 				04E6E6652710960100497103 /* SignUpControllerFactory.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		04E6E69127109E0B00497103 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04E6E69227109E3000497103 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04E6E6B62710B79C00497103 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				04E6E6B72710B81400497103 /* RoundedTextField.swift */,
+				04E6E6CD2710B94900497103 /* NavigationController.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		04FCAD152707ACD400FE557D /* Proxy */ = {
@@ -1611,6 +1642,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				043F307C2705EFBF003F82CD /* SignUp.storyboard in Resources */,
+				04E6E69327109E3000497103 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1748,8 +1780,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				043F30D227064069003F82CD /* UIViewControllerExtensions.swift in Sources */,
+				04E6E6B82710B81400497103 /* RoundedTextField.swift in Sources */,
+				04E6E6AB2710B67A00497103 /* Colors.swift in Sources */,
 				043F30E427064267003F82CD /* Storyboard.swift in Sources */,
 				043F30722705EF65003F82CD /* SignUpViewController.swift in Sources */,
+				04E6E6CE2710B94900497103 /* NavigationController.swift in Sources */,
+				04E6E69F2710B65700497103 /* UIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
