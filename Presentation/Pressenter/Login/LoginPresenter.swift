@@ -25,7 +25,24 @@ public final class LoginPresenter {
         if let message = validation.validate(data: viewModel.toJson()) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))
         } else {
-            authentication.auth(authenticationModel: viewModel.toAuthenticatioModel()) { _ in }
+            self.loadingView.display(viewModel: LoadingViewModel(isLoading: true))
+            authentication.auth(authenticationModel: viewModel.toAuthenticatioModel()) { [weak self] result in
+                guard let self = self else { return }
+                self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
+                switch result {
+                case .failure(let error):
+                    var errorMessage: String?
+                    switch error {
+                    case .expiredSession:
+                        errorMessage = "Email e/ou senha invalidos."
+                    default:
+                        errorMessage =  "Algo inesperado aconteceu tente novamente em instantes"
+                    }
+                    self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: errorMessage))
+                    
+                case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso", message:  "Conta logada com sucesso"))
+                }
+            }
         }
     }
 }
