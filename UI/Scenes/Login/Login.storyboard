@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="cH8-3w-b30">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="vjp-gb-6ik" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="vjp-gb-6ik" customClass="LoginViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hEk-gf-x91">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,9 @@
                                 <color key="textColor" red="0.1671690334" green="0.1718155069" blue="0.19887467619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailTextField:" destination="Fy0-cn-HU6" eventType="editingDidEnd" id="fjv-JM-et5"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zsk-C4-D2f" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
                                 <rect key="frame" x="20" y="330" width="374" height="40"/>
@@ -96,13 +99,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="wgv-2V-gRZ" id="7kv-bo-JY7"/>
-                        <outlet property="loadingIndicator" destination="EZl-Pf-GcF" id="eDb-gK-6N4"/>
-                        <outlet property="passwordTextField" destination="Zsk-C4-D2f" id="KLV-kT-1Rg"/>
-                        <outlet property="saveButton" destination="5JC-oa-KeP" id="jFc-4Y-s3p"/>
+                        <outlet property="emailTextField" destination="wgv-2V-gRZ" id="ffe-cL-emS"/>
+                        <outlet property="loadingIndicator" destination="EZl-Pf-GcF" id="3bC-Vr-G5n"/>
+                        <outlet property="passwordTextField" destination="Zsk-C4-D2f" id="KJK-u4-jRf"/>
+                        <outlet property="saveButton" destination="5JC-oa-KeP" id="GYO-7V-A4u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="It9-ID-ifa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Fy0-cn-HU6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-958" y="-104"/>
         </scene>
