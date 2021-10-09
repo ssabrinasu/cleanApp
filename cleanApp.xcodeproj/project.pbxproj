@@ -54,6 +54,7 @@
 		04499E44270C837D001EB5B6 /* ValidationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04499E43270C837D001EB5B6 /* ValidationSpy.swift */; };
 		04499E50270C9DA7001EB5B6 /* EmailValidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F318727064E21003F82CD /* EmailValidatorAdapter.swift */; };
 		044BE4402711E00700655D31 /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BE43F2711E00700655D31 /* AuthenticationSpy.swift */; };
+		044BE44D2712042300655D31 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044BE44C2712042300655D31 /* Login.storyboard */; };
 		0452CB34270740720007D6D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452CB33270740720007D6D4 /* AppDelegate.swift */; };
 		0452CB36270740720007D6D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452CB35270740720007D6D4 /* SceneDelegate.swift */; };
 		0452CB3D270740790007D6D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0452CB3C270740790007D6D4 /* Assets.xcassets */; };
@@ -402,6 +403,7 @@
 		04499E01270C8260001EB5B6 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		04499E43270C837D001EB5B6 /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
 		044BE43F2711E00700655D31 /* AuthenticationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
+		044BE44C2712042300655D31 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0452CB31270740720007D6D4 /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0452CB33270740720007D6D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0452CB35270740720007D6D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -783,6 +785,7 @@
 		043F30AA2706289E003F82CD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				044BE44B271203D000655D31 /* Login */,
 				043F30A827062837003F82CD /* SignUp */,
 			);
 			path = Scenes;
@@ -880,6 +883,14 @@
 				043F318727064E21003F82CD /* EmailValidatorAdapter.swift */,
 			);
 			path = Validators;
+			sourceTree = "<group>";
+		};
+		044BE44B271203D000655D31 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				044BE44C2712042300655D31 /* Login.storyboard */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		0452CB32270740720007D6D4 /* Main */ = {
@@ -1680,6 +1691,7 @@
 			files = (
 				043F307C2705EFBF003F82CD /* SignUp.storyboard in Resources */,
 				04E6E69327109E3000497103 /* Images.xcassets in Resources */,
+				044BE44D2712042300655D31 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
