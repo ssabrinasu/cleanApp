@@ -94,7 +94,7 @@ class SingUpPresenterTests: XCTestCase {
         XCTAssertTrue(NSDictionary(dictionary: validationSpy.data!).isEqual(to:viewModel.toJson()!))
     }
     
-    func test_singUp_should_show_error_message_if_validation_false() {
+    func test_singUp_should_show_error_message_if_validation_failse() {
         let alertViewSpy = AlertViewSpy()
         let validationSpy = ValidationSpy()
         let sut = makeSut(alertView: alertViewSpy, validation: validationSpy)

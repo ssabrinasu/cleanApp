@@ -8,7 +8,6 @@
 import Foundation
 import Domain
 
-
 class AddAccountSpy: AddAccount {
     var addAccountModel: AddAccountModel?
     var completion: ((AddAccount.Result) -> Void)?

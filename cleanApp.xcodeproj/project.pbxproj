@@ -53,6 +53,7 @@
 		04499E2E270C8319001EB5B6 /* EmailValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046907742702A9530039E740 /* EmailValidators.swift */; };
 		04499E44270C837D001EB5B6 /* ValidationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04499E43270C837D001EB5B6 /* ValidationSpy.swift */; };
 		04499E50270C9DA7001EB5B6 /* EmailValidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F318727064E21003F82CD /* EmailValidatorAdapter.swift */; };
+		044BE4402711E00700655D31 /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BE43F2711E00700655D31 /* AuthenticationSpy.swift */; };
 		0452CB34270740720007D6D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452CB33270740720007D6D4 /* AppDelegate.swift */; };
 		0452CB36270740720007D6D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452CB35270740720007D6D4 /* SceneDelegate.swift */; };
 		0452CB3D270740790007D6D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0452CB3C270740790007D6D4 /* Assets.xcassets */; };
@@ -400,6 +401,7 @@
 		04497136270E440500F89BC5 /* ValidationCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCompositeTests.swift; sourceTree = "<group>"; };
 		04499E01270C8260001EB5B6 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		04499E43270C837D001EB5B6 /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
+		044BE43F2711E00700655D31 /* AuthenticationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		0452CB31270740720007D6D4 /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0452CB33270740720007D6D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0452CB35270740720007D6D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -726,6 +728,7 @@
 			isa = PBXGroup;
 			children = (
 				043F2FDC2704E853003F82CD /* AddAccountSpy.swift */,
+				044BE43F2711E00700655D31 /* AuthenticationSpy.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -1811,6 +1814,7 @@
 				043F2F8B2704C11C003F82CD /* TextExtensions.swift in Sources */,
 				04499E44270C837D001EB5B6 /* ValidationSpy.swift in Sources */,
 				043F2FF42704E95D003F82CD /* TestFactories.swift in Sources */,
+				044BE4402711E00700655D31 /* AuthenticationSpy.swift in Sources */,
 				042F98A226FEAEEE00B2742D /* SingUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

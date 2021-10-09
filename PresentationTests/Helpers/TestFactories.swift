@@ -14,7 +14,7 @@ func makeSingUpViewModel(name: String? = "any name", email: String? = "anyname@g
     
 }
 
-func makeLoginViewModel(email: String? = "anyname@gmail.com", password: String? = "12345",) -> LoginViewModel {
+func makeLoginViewModel(email: String? = "anyname@gmail.com", password: String? = "12345") -> LoginViewModel {
     return LoginViewModel(email: email, password: password)
 }
 
