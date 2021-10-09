@@ -14,8 +14,6 @@ public final class SingUpPresenter {
     private let loadingView: LoadingView
     private let validation: Validation
 
-    
-
     public init(alertView: AlertView, addAccount: AddAccount, loadingView: LoadingView, validation: Validation) {
         self.alertView = alertView
         self.addAccount = addAccount
@@ -49,3 +47,4 @@ public final class SingUpPresenter {
         }
     }
 }
+

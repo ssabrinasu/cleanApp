@@ -25,3 +25,5 @@ public struct SingUpViewModel: Model {
         return AddAccountModel(name: name!, email: email!, password: password!, passwordConfiemation: passwordConfirmation!)
     }
 }
+
+LoginViewModel

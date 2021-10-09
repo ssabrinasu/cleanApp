@@ -12,13 +12,13 @@ class RemoteAuthenticationTests: XCTestCase {
     func test_auth_should_call_httpClient_with_correct_url() {
         let url = makeUrl()
         let (sut, httClientSpy) = makeSut(url: url)
-        sut.auth(authenticationtModel: makeAuthenticationtModel()) { _ in }
+        sut.auth(authenticationModel: makeAuthenticationtModel()) { _ in }
         XCTAssertEqual(httClientSpy.urls, [url])
     }
     func test_auth_should_call_httpClient_with_correct_data() {
         let (sut, httClientSpy) = makeSut()
         let authenticationtModel = makeAuthenticationtModel()
-        sut.auth(authenticationtModel: authenticationtModel) { _ in }
+        sut.auth(authenticationModel: authenticationtModel) { _ in }
         XCTAssertEqual(httClientSpy.data, authenticationtModel.toData())
     }
     func test_auth_should_complete_with_error_if_client_completes_with_error() {
@@ -52,7 +52,7 @@ class RemoteAuthenticationTests: XCTestCase {
         let httClientSpy = HttpClientSpy()
         var sut:  RemoteAuthentication? =  RemoteAuthentication(url: makeUrl(), HttpClient: httClientSpy)
         var result: Authentication.Result?
-        sut?.auth(authenticationtModel: makeAuthenticationtModel()) { result = $0 }
+        sut?.auth(authenticationModel: makeAuthenticationtModel()) { result = $0 }
         sut = nil
         httClientSpy.completionWithError(.noConnectivity)
         XCTAssertNil(result)
@@ -69,7 +69,7 @@ extension RemoteAuthenticationTests {
     }
     func expect(_ sut: RemoteAuthentication, comleteWith expectedResult: Authentication.Result, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         let exp = expectation(description: "waiting")
-        sut.auth(authenticationtModel: makeAuthenticationtModel()) { receivedResult in
+        sut.auth(authenticationModel: makeAuthenticationtModel()) { receivedResult in
             switch (expectedResult, receivedResult) {
             case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
             case (.success(let expectedAccount), .success(let receivedAccount)): XCTAssertEqual(expectedAccount, receivedAccount, file: file, line: line)
