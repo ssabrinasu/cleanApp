@@ -102,6 +102,8 @@
 		047293FA271603C500961F5E /* LoginControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047293F9271603C500961F5E /* LoginControllerFactory.swift */; };
 		047294052716052300961F5E /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BE43F2711E00700655D31 /* AuthenticationSpy.swift */; };
 		04729412271645D000961F5E /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04729411271645D000961F5E /* Welcome.storyboard */; };
+		0472941F27164B4B00961F5E /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472941E27164B4B00961F5E /* WelcomeViewControllerTests.swift */; };
+		047294352716500800961F5E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047294342716500800961F5E /* WelcomeViewController.swift */; };
 		048C5F79271232A3002E1BBE /* LoginControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C5F78271232A3002E1BBE /* LoginControllerFactoryTests.swift */; };
 		04B0CD15270C9F2300AE22E4 /* EmailValidatorAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F317527064A11003F82CD /* EmailValidatorAdapterTests.swift */; };
 		04B0CD2B270C9FA500AE22E4 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043F30F22706477D003F82CD /* Validation.framework */; };
@@ -448,6 +450,8 @@
 		047293ED2716025A00961F5E /* RemoteAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthentication.swift; sourceTree = "<group>"; };
 		047293F9271603C500961F5E /* LoginControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerFactory.swift; sourceTree = "<group>"; };
 		04729411271645D000961F5E /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		0472941E27164B4B00961F5E /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
+		047294342716500800961F5E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		048C5F78271232A3002E1BBE /* LoginControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerFactoryTests.swift; sourceTree = "<group>"; };
 		04B0CD66270CD20400AE22E4 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		04E6E62627108D7E00497103 /* RemoteAddAccountFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountFactory.swift; sourceTree = "<group>"; };
@@ -808,6 +812,7 @@
 		043F30AB270628AF003F82CD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0472941D27164B1600961F5E /* Welcome */,
 				044BE462271205CF00655D31 /* Login */,
 				043F30A927062855003F82CD /* SignUp */,
 			);
@@ -1081,6 +1086,15 @@
 			isa = PBXGroup;
 			children = (
 				04729411271645D000961F5E /* Welcome.storyboard */,
+				047294342716500800961F5E /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		0472941D27164B1600961F5E /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				0472941E27164B4B00961F5E /* WelcomeViewControllerTests.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1871,6 +1885,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047294352716500800961F5E /* WelcomeViewController.swift in Sources */,
 				043F30D227064069003F82CD /* UIViewControllerExtensions.swift in Sources */,
 				04E6E6B82710B81400497103 /* RoundedTextField.swift in Sources */,
 				04E6E6AB2710B67A00497103 /* Colors.swift in Sources */,
@@ -1888,6 +1903,7 @@
 			files = (
 				044BE464271205F200655D31 /* LoginViewControllerTests.swift in Sources */,
 				043F30502705EA0B003F82CD /* SignUpViewControllerTests.swift in Sources */,
+				0472941F27164B4B00961F5E /* WelcomeViewControllerTests.swift in Sources */,
 				043F30AF27062932003F82CD /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
