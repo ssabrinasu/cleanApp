@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Core.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>Data.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -27,17 +32,17 @@
 		<key>Main.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>5</integer>
 		</dict>
 		<key>Presentation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>7</integer>
 		</dict>
 		<key>UI.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>9</integer>
 		</dict>
 		<key>UseCasesIntegrationTests.xcscheme_^#shared#^_</key>
 		<dict>
@@ -47,7 +52,7 @@
 		<key>Validation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>cleanApp.xcscheme_^#shared#^_</key>
 		<dict>
@@ -68,6 +73,21 @@
 			<true/>
 		</dict>
 		<key>0415ACE626F2706600194713</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>042F988326FEAE8300B2742D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>043F30F12706477D003F82CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>043F30F92706477E003F82CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

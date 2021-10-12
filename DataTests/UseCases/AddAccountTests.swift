@@ -24,14 +24,21 @@ class RemoteAddAccountTests: XCTestCase {
         XCTAssertEqual(httClientSpy.data, addAccountModel.toData())
     }
     
-    func test_add_should_comlete_with_error_if_client_completes_with_error() {
+    func test_add_should_complete_with_error_if_client_completes_with_error() {
         let (sut, httClientSpy) = makeSut()
         expect(sut, comleteWith: .failure(.unexpected), when: {
             httClientSpy.completionWithError(.noConnectivity)
         })
     }
     
-    func test_add_should_comlete_with_account_if_client_completes_with_data() {
+    func test_add_should_complete_with_email_if_use_error_client_completes_with_firbidden() {
+        let (sut, httClientSpy) = makeSut()
+        expect(sut, comleteWith: .failure(.emailInUse), when: {
+            httClientSpy.completionWithError(.forbidden)
+        })
+    }
+    
+    func test_add_should_complete_with_account_if_client_completes_with_valid_data() {
         let (sut, httClientSpy) = makeSut()
         let account = makeAccountModel()
         expect(sut, comleteWith: .success(account), when: {
@@ -39,17 +46,17 @@ class RemoteAddAccountTests: XCTestCase {
         })
     }
     
-    func test_add_should_comlete_with_error_if_client_completes_with_invalid_data() {
+    func test_add_should_complete_with_error_if_client_completes_with_invalid_data() {
         let (sut, httClientSpy) = makeSut()
         expect(sut, comleteWith: .failure(.unexpected), when: {
             httClientSpy.completionWithData(makeInvalidData())
         })
     }
     
-    func test_add_should_not_comlete_if_sut_has_been_deallocated() {
+    func test_add_should_not_complete_if_sut_has_been_deallocated() {
         let httClientSpy = HttpClientSpy()
         var sut:  RemoteAddAccount? =  RemoteAddAccount(url: makeUrl(), HttpClient: httClientSpy)
-        var result: Result<AccountModel, DomainError>?
+        var result: AddAccount.Result?
         sut?.add(addAccountModel: makeAddAccountModel()) { result = $0 }
         sut = nil
         httClientSpy.completionWithError(.noConnectivity)
@@ -67,7 +74,7 @@ extension RemoteAddAccountTests {
         return (sut, httClientSpy)
     }
     
-    func expect(_ sut: RemoteAddAccount, comleteWith expectedResult: Result<AccountModel, DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+    func expect(_ sut: RemoteAddAccount, comleteWith expectedResult: AddAccount.Result, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         let exp = expectation(description: "waiting")
         sut.add(addAccountModel: makeAddAccountModel()) { receivedResult in
             switch (expectedResult, receivedResult) {
@@ -80,9 +87,4 @@ extension RemoteAddAccountTests {
         action()
         wait(for: [exp], timeout: 1)
     }
- 
-    func makeAccountModel() -> AccountModel {
-        return AccountModel(id: "a2", name: "any name", email: "anyname@gmail.com", password: "12345")
-    }
- 
 }
