@@ -11,5 +11,5 @@ import Domain
 
 func makeRemoteAuthentication(httpClient: HttpPostClient) -> Authentication {
         let remoteAuthentication =  RemoteAuthentication(url: makeApiUrl(path: "login"), HttpClient: httpClient)
-    return MainQueueDispatchDecorator(remoteAuthentication) as! Authentication
+        return MainQueueDispatchDecorator(remoteAuthentication)
 }
