@@ -98,6 +98,10 @@
 		045CF02226FB69DD0034F747 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045CF01926FB69DC0034F747 /* Infra.framework */; };
 		0469074D2702A1A10039E740 /* SingUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469074C2702A1A10039E740 /* SingUpPresenter.swift */; };
 		046907582702A2640039E740 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046907572702A2640039E740 /* AlertView.swift */; };
+		047293EE2716025A00961F5E /* RemoteAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047293ED2716025A00961F5E /* RemoteAuthentication.swift */; };
+		047293FA271603C500961F5E /* LoginControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047293F9271603C500961F5E /* LoginControllerFactory.swift */; };
+		047294052716052300961F5E /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BE43F2711E00700655D31 /* AuthenticationSpy.swift */; };
+		048C5F79271232A3002E1BBE /* LoginControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C5F78271232A3002E1BBE /* LoginControllerFactoryTests.swift */; };
 		04B0CD15270C9F2300AE22E4 /* EmailValidatorAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F317527064A11003F82CD /* EmailValidatorAdapterTests.swift */; };
 		04B0CD2B270C9FA500AE22E4 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043F30F22706477D003F82CD /* Validation.framework */; };
 		04B0CD2C270C9FA500AE22E4 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 043F30F22706477D003F82CD /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -108,7 +112,7 @@
 		04E6E64B2710913400497103 /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E64A2710913400497103 /* AlamofireAdapterFactory.swift */; };
 		04E6E65A2710953F00497103 /* EmailValidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E6592710953F00497103 /* EmailValidatorAdapter.swift */; };
 		04E6E6662710960100497103 /* SignUpControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E6652710960100497103 /* SignUpControllerFactory.swift */; };
-		04E6E67C271096D100497103 /* SignUpFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E67B271096D100497103 /* SignUpFactoryTests.swift */; };
+		04E6E67C271096D100497103 /* SignUpControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E67B271096D100497103 /* SignUpControllerFactoryTests.swift */; };
 		04E6E69327109E3000497103 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E6E69227109E3000497103 /* Images.xcassets */; };
 		04E6E69F2710B65700497103 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E69E2710B65700497103 /* UIColorExtensions.swift */; };
 		04E6E6AB2710B67A00497103 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E6AA2710B67A00497103 /* Colors.swift */; };
@@ -440,13 +444,16 @@
 		0469074C2702A1A10039E740 /* SingUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpPresenter.swift; sourceTree = "<group>"; };
 		046907572702A2640039E740 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		046907742702A9530039E740 /* EmailValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidators.swift; sourceTree = "<group>"; };
+		047293ED2716025A00961F5E /* RemoteAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthentication.swift; sourceTree = "<group>"; };
+		047293F9271603C500961F5E /* LoginControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerFactory.swift; sourceTree = "<group>"; };
+		048C5F78271232A3002E1BBE /* LoginControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerFactoryTests.swift; sourceTree = "<group>"; };
 		04B0CD66270CD20400AE22E4 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		04E6E62627108D7E00497103 /* RemoteAddAccountFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountFactory.swift; sourceTree = "<group>"; };
 		04E6E63D27108E1100497103 /* ApiUrlFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		04E6E64A2710913400497103 /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
 		04E6E6592710953F00497103 /* EmailValidatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapter.swift; sourceTree = "<group>"; };
 		04E6E6652710960100497103 /* SignUpControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpControllerFactory.swift; sourceTree = "<group>"; };
-		04E6E67B271096D100497103 /* SignUpFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactoryTests.swift; sourceTree = "<group>"; };
+		04E6E67B271096D100497103 /* SignUpControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpControllerFactoryTests.swift; sourceTree = "<group>"; };
 		04E6E69227109E3000497103 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04E6E69E2710B65700497103 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		04E6E6AA2710B67A00497103 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -926,7 +933,7 @@
 		0452CB492707407A0007D6D4 /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
-				04B0CD39270CB84300AE22E4 /* Composers */,
+				04B0CD39270CB84300AE22E4 /* Factories */,
 				0452CB4C2707407A0007D6D4 /* Info.plist */,
 			);
 			path = MainTests;
@@ -1074,12 +1081,13 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
-		04B0CD39270CB84300AE22E4 /* Composers */ = {
+		04B0CD39270CB84300AE22E4 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				04E6E67B271096D100497103 /* SignUpFactoryTests.swift */,
+				04E6E67B271096D100497103 /* SignUpControllerFactoryTests.swift */,
+				048C5F78271232A3002E1BBE /* LoginControllerFactoryTests.swift */,
 			);
-			path = Composers;
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		04B0CD65270CD1E900AE22E4 /* Decorators */ = {
@@ -1103,6 +1111,7 @@
 			children = (
 				04E6E63D27108E1100497103 /* ApiUrlFactory.swift */,
 				04E6E62627108D7E00497103 /* RemoteAddAccountFactory.swift */,
+				047293ED2716025A00961F5E /* RemoteAuthentication.swift */,
 			);
 			path = Http;
 			sourceTree = "<group>";
@@ -1120,6 +1129,7 @@
 			isa = PBXGroup;
 			children = (
 				04E6E6652710960100497103 /* SignUpControllerFactory.swift */,
+				047293F9271603C500961F5E /* LoginControllerFactory.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1908,6 +1918,8 @@
 				04E6E62727108D7E00497103 /* RemoteAddAccountFactory.swift in Sources */,
 				04E6E63E27108E1100497103 /* ApiUrlFactory.swift in Sources */,
 				04FCAD73270B769400FE557D /* Environment.swift in Sources */,
+				047293FA271603C500961F5E /* LoginControllerFactory.swift in Sources */,
+				047293EE2716025A00961F5E /* RemoteAuthentication.swift in Sources */,
 				04FCAD172707AD2500FE557D /* WeakVarProxy.swift in Sources */,
 				0452CB36270740720007D6D4 /* SceneDelegate.swift in Sources */,
 			);
@@ -1919,8 +1931,10 @@
 			files = (
 				0452CD112707A6040007D6D4 /* AddAccountSpy.swift in Sources */,
 				04570719270F589300FC2DC3 /* EmailValidatorSpy.swift in Sources */,
+				047294052716052300961F5E /* AuthenticationSpy.swift in Sources */,
+				048C5F79271232A3002E1BBE /* LoginControllerFactoryTests.swift in Sources */,
 				04B0CD5A270CBE4000AE22E4 /* TestFactories.swift in Sources */,
-				04E6E67C271096D100497103 /* SignUpFactoryTests.swift in Sources */,
+				04E6E67C271096D100497103 /* SignUpControllerFactoryTests.swift in Sources */,
 				0452CD272707A6440007D6D4 /* TextExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
