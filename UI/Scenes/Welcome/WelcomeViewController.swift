@@ -14,6 +14,7 @@ public final class WelcomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var singUpButton: UIButton!
     
     public var login: (() -> Void)?
+    public var signUp: (() -> Void)?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +24,16 @@ public final class WelcomeViewController: UIViewController, Storyboarded {
     private func configure() {
         title = "4Devs"
         loginButton?.layer.cornerRadius = 5
-        loginButton?.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
-        hideKeyBoardOnTap()
+        loginButton?.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        singUpButton?.layer.cornerRadius = 5
+        singUpButton?.addTarget(self, action: #selector(singUpButtonTapped), for: .touchUpInside)
     }
  
-    @objc private func saveButtonTapped() {
+    @objc private func loginButtonTapped() {
         login?()
+    }
+    @objc private func singUpButtonTapped() {
+        signUp?()
     }
 }
 
