@@ -21,7 +21,7 @@ public final class SingUpPresenter {
         self.validation = validation
     }
     
-    public func singUp(viewModel: SingUpViewModel) {
+    public func singUp(viewModel: SingUpRequest) {
         
         if let message = validation.validate(data: viewModel.toJson()) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))

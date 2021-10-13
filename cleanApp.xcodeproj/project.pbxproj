@@ -22,7 +22,7 @@
 		043F2F722704BB6E003F82CD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2F712704BB6E003F82CD /* LoadingView.swift */; };
 		043F2F8B2704C11C003F82CD /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E9826FA6EE2001E05E1 /* TextExtensions.swift */; };
 		043F2F9F2704C123003F82CD /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04545E9826FA6EE2001E05E1 /* TextExtensions.swift */; };
-		043F2FA82704E457003F82CD /* SingUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FA72704E457003F82CD /* SingUpViewModel.swift */; };
+		043F2FA82704E457003F82CD /* SingUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FA72704E457003F82CD /* SingUpRequest.swift */; };
 		043F2FC52704E77F003F82CD /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FC42704E77F003F82CD /* AlertViewSpy.swift */; };
 		043F2FDD2704E853003F82CD /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FDC2704E853003F82CD /* AddAccountSpy.swift */; };
 		043F2FEB2704E896003F82CD /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F2FEA2704E896003F82CD /* LoadingViewSpy.swift */; };
@@ -125,7 +125,7 @@
 		04E6E6E62710C56B00497103 /* RemoteAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E6E52710C56B00497103 /* RemoteAuthenticationTests.swift */; };
 		04E6E6F22710C72500497103 /* RemoteAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E6F12710C72500497103 /* RemoteAuthentication.swift */; };
 		04E6E6FF27113C3E00497103 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E6FE27113C3E00497103 /* LoginPresenterTests.swift */; };
-		04E6E7162711402800497103 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E7152711402800497103 /* LoginViewModel.swift */; };
+		04E6E7162711402800497103 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E7152711402800497103 /* LoginRequest.swift */; };
 		04E6E722271140FD00497103 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6E721271140FD00497103 /* LoginPresenter.swift */; };
 		04FCAD172707AD2500FE557D /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCAD162707AD2500FE557D /* WeakVarProxy.swift */; };
 		04FCAD73270B769400FE557D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCAD72270B769400FE557D /* Environment.swift */; };
@@ -380,7 +380,7 @@
 		042F989326FEAE8400B2742D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042F98A126FEAEEE00B2742D /* SingUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpPresenterTests.swift; sourceTree = "<group>"; };
 		043F2F712704BB6E003F82CD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		043F2FA72704E457003F82CD /* SingUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewModel.swift; sourceTree = "<group>"; };
+		043F2FA72704E457003F82CD /* SingUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpRequest.swift; sourceTree = "<group>"; };
 		043F2FC42704E77F003F82CD /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
 		043F2FD22704E7CE003F82CD /* EmailValidatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpy.swift; sourceTree = "<group>"; };
 		043F2FDC2704E853003F82CD /* AddAccountSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
@@ -469,7 +469,7 @@
 		04E6E6E52710C56B00497103 /* RemoteAuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationTests.swift; sourceTree = "<group>"; };
 		04E6E6F12710C72500497103 /* RemoteAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthentication.swift; sourceTree = "<group>"; };
 		04E6E6FE27113C3E00497103 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
-		04E6E7152711402800497103 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		04E6E7152711402800497103 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		04E6E721271140FD00497103 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		04FCAD162707AD2500FE557D /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
 		04FCAD51270B3FEA00FE557D /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -721,7 +721,7 @@
 			isa = PBXGroup;
 			children = (
 				0469074C2702A1A10039E740 /* SingUpPresenter.swift */,
-				043F2FA72704E457003F82CD /* SingUpViewModel.swift */,
+				043F2FA72704E457003F82CD /* SingUpRequest.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -1187,7 +1187,7 @@
 		04E6E71427113FD300497103 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				04E6E7152711402800497103 /* LoginViewModel.swift */,
+				04E6E7152711402800497103 /* LoginRequest.swift */,
 				04E6E721271140FD00497103 /* LoginPresenter.swift */,
 			);
 			path = Login;
@@ -1854,10 +1854,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043F2FA82704E457003F82CD /* SingUpViewModel.swift in Sources */,
+				043F2FA82704E457003F82CD /* SingUpRequest.swift in Sources */,
 				0469074D2702A1A10039E740 /* SingUpPresenter.swift in Sources */,
 				04E6E722271140FD00497103 /* LoginPresenter.swift in Sources */,
-				04E6E7162711402800497103 /* LoginViewModel.swift in Sources */,
+				04E6E7162711402800497103 /* LoginRequest.swift in Sources */,
 				043F2F722704BB6E003F82CD /* LoadingView.swift in Sources */,
 				046907582702A2640039E740 /* AlertView.swift in Sources */,
 				04499E02270C8260001EB5B6 /* Validation.swift in Sources */,
