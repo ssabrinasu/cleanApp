@@ -108,7 +108,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="It9-ID-ifa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Fy0-cn-HU6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-958" y="-104"/>
+            <point key="canvasLocation" x="-961" y="-117"/>
         </scene>
     </scenes>
     <resources>

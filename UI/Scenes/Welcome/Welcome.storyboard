@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="krn-fK-OfR">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="GKg-c1-ig2" userLabel="Welcome View Controller" customClass="WelcomeViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B6d-Lu-gPI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5gc-XJ-NNW">
+                                <rect key="frame" x="147" y="94" width="120" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="9VU-LF-kGE"/>
+                                    <constraint firstAttribute="width" constant="120" id="sa8-HR-lrM"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2f-C4-tGB">
+                                <rect key="frame" x="38" y="234" width="338" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ex7-hi-5A4"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEJA BEM VINDO " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPe-dD-AFu">
+                                <rect key="frame" x="38" y="285" width="338" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBd-zf-lRa">
+                                <rect key="frame" x="38" y="369" width="348" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Lb5-ET-FCu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="ENTRAR">
+                                    <color key="titleColor" red="0.37210357189999999" green="0.051166728139999999" blue="0.17659267779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y1-Iz-EDd">
+                                <rect key="frame" x="38" y="439" width="338" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="dXk-tJ-evH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOg-ml-ZPQ">
+                                <rect key="frame" x="38" y="470" width="338" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hda-V2-l5o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="CRIAR CONTA">
+                                    <color key="titleColor" red="0.37210357189999999" green="0.051166728139999999" blue="0.17659267779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wsD-1j-OBK"/>
+                        <color key="backgroundColor" red="0.53038674590000001" green="0.044794432820000001" blue="0.29885303969999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="L2f-C4-tGB" firstAttribute="leading" secondItem="wsD-1j-OBK" secondAttribute="leading" constant="38" id="25V-AX-ynG"/>
+                            <constraint firstItem="bBd-zf-lRa" firstAttribute="top" secondItem="CPe-dD-AFu" secondAttribute="bottom" constant="60" id="3Rn-Rp-6IR"/>
+                            <constraint firstItem="vOg-ml-ZPQ" firstAttribute="leading" secondItem="wsD-1j-OBK" secondAttribute="leading" constant="38" id="4UQ-tw-6fP"/>
+                            <constraint firstItem="wsD-1j-OBK" firstAttribute="trailing" secondItem="vOg-ml-ZPQ" secondAttribute="trailing" constant="38" id="5Ie-PJ-aUd"/>
+                            <constraint firstItem="wsD-1j-OBK" firstAttribute="trailing" secondItem="CPe-dD-AFu" secondAttribute="trailing" constant="38" id="68k-og-GkO"/>
+                            <constraint firstItem="wsD-1j-OBK" firstAttribute="trailing" secondItem="4y1-Iz-EDd" secondAttribute="trailing" constant="38" id="8V0-2t-Zdh"/>
+                            <constraint firstItem="CPe-dD-AFu" firstAttribute="top" secondItem="L2f-C4-tGB" secondAttribute="bottom" constant="50" id="Af5-ja-Pgp"/>
+                            <constraint firstItem="5gc-XJ-NNW" firstAttribute="top" secondItem="wsD-1j-OBK" secondAttribute="top" constant="50" id="DLf-SY-Kec"/>
+                            <constraint firstItem="4y1-Iz-EDd" firstAttribute="top" secondItem="bBd-zf-lRa" secondAttribute="bottom" constant="10" id="NSt-aX-vTS"/>
+                            <constraint firstItem="bBd-zf-lRa" firstAttribute="leading" secondItem="wsD-1j-OBK" secondAttribute="leading" constant="38" id="R0M-9F-Prt"/>
+                            <constraint firstItem="vOg-ml-ZPQ" firstAttribute="top" secondItem="4y1-Iz-EDd" secondAttribute="bottom" constant="10" id="Z2k-nm-tAw"/>
+                            <constraint firstItem="wsD-1j-OBK" firstAttribute="trailing" secondItem="bBd-zf-lRa" secondAttribute="trailing" constant="28" id="bbZ-Kv-oT7"/>
+                            <constraint firstItem="wsD-1j-OBK" firstAttribute="trailing" secondItem="L2f-C4-tGB" secondAttribute="trailing" constant="38" id="eRL-lX-Pwn"/>
+                            <constraint firstItem="CPe-dD-AFu" firstAttribute="leading" secondItem="wsD-1j-OBK" secondAttribute="leading" constant="38" id="elx-Wv-bzo"/>
+                            <constraint firstItem="5gc-XJ-NNW" firstAttribute="centerX" secondItem="B6d-Lu-gPI" secondAttribute="centerX" id="grB-Ac-q4Q"/>
+                            <constraint firstItem="4y1-Iz-EDd" firstAttribute="leading" secondItem="wsD-1j-OBK" secondAttribute="leading" constant="38" id="ut7-r2-o9c"/>
+                            <constraint firstItem="L2f-C4-tGB" firstAttribute="top" secondItem="5gc-XJ-NNW" secondAttribute="bottom" constant="50" id="uy6-Uq-Kcz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="bBd-zf-lRa" id="SMR-xH-fdJ"/>
+                        <outlet property="singUpButton" destination="vOg-ml-ZPQ" id="hbJ-dR-HoF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9k-fK-xuf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-962.31884057971024" y="-117.1875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="120" height="87"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

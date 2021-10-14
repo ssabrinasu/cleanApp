@@ -9,13 +9,13 @@ import Foundation
 import Presentation
 import Domain
 
-func makeSingUpViewModel(name: String? = "any name", email: String? = "anyname@gmail.com", password: String? = "12345", passwordConfirmation: String? = "12345") -> SingUpViewModel {
-    return SingUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
+func makeSingUpViewModel(name: String? = "any name", email: String? = "anyname@gmail.com", password: String? = "12345", passwordConfirmation: String? = "12345") -> SingUpRequest {
+    return SingUpRequest(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
     
 }
 
-func makeLoginViewModel(email: String? = "anyname@gmail.com", password: String? = "12345") -> LoginViewModel {
-    return LoginViewModel(email: email, password: password)
+func makeLoginViewModel(email: String? = "anyname@gmail.com", password: String? = "12345") -> LoginRequest {
+    return LoginRequest(email: email, password: password)
 }
 
 func makeRequiredAlertViewModel(fieldName: String) -> AlertViewModel {
