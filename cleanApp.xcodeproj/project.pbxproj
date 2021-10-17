@@ -54,6 +54,7 @@
 		04499E44270C837D001EB5B6 /* ValidationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04499E43270C837D001EB5B6 /* ValidationSpy.swift */; };
 		04499E50270C9DA7001EB5B6 /* EmailValidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F318727064E21003F82CD /* EmailValidatorAdapter.swift */; };
 		044B9349271B70EE0085E271 /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B9348271B70EE0085E271 /* WelcomeRouterTests.swift */; };
+		044B9355271BC7DC0085E271 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B9354271BC7DC0085E271 /* WelcomeRouter.swift */; };
 		044BE4402711E00700655D31 /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BE43F2711E00700655D31 /* AuthenticationSpy.swift */; };
 		044BE44D2712042300655D31 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044BE44C2712042300655D31 /* Login.storyboard */; };
 		044BE464271205F200655D31 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BE463271205F200655D31 /* LoginViewControllerTests.swift */; };
@@ -413,6 +414,7 @@
 		04499E01270C8260001EB5B6 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		04499E43270C837D001EB5B6 /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
 		044B9348271B70EE0085E271 /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
+		044B9354271BC7DC0085E271 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		044BE43F2711E00700655D31 /* AuthenticationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		044BE44C2712042300655D31 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		044BE463271205F200655D31 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
@@ -1089,6 +1091,7 @@
 			children = (
 				04729411271645D000961F5E /* Welcome.storyboard */,
 				047294342716500800961F5E /* WelcomeViewController.swift */,
+				044B9354271BC7DC0085E271 /* WelcomeRouter.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1891,6 +1894,7 @@
 				047294352716500800961F5E /* WelcomeViewController.swift in Sources */,
 				043F30D227064069003F82CD /* UIViewControllerExtensions.swift in Sources */,
 				04E6E6B82710B81400497103 /* RoundedTextField.swift in Sources */,
+				044B9355271BC7DC0085E271 /* WelcomeRouter.swift in Sources */,
 				04E6E6AB2710B67A00497103 /* Colors.swift in Sources */,
 				043F30E427064267003F82CD /* Storyboard.swift in Sources */,
 				044BE47A271206D500655D31 /* LoginViewController.swift in Sources */,
