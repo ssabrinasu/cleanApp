@@ -9,7 +9,11 @@ import Data
 import Infra
 import Domain
 
-func makeRemoteAuthentication(httpClient: HttpPostClient) -> Authentication {
+func makeRemoteAuthentication() -> Authentication {
+    makeRemoteAuthenticationWith(httpClient: makeAlamofireAdapter())
+}
+
+public func makeRemoteAuthenticationWith(httpClient: HttpPostClient) -> Authentication {
         let remoteAuthentication =  RemoteAuthentication(url: makeApiUrl(path: "login"), HttpClient: httpClient)
         return MainQueueDispatchDecorator(remoteAuthentication)
 }

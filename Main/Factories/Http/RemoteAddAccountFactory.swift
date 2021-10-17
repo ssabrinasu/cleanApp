@@ -9,7 +9,11 @@ import Data
 import Infra
 import Domain
 
-func makeRemoteAddAccount(httpClient: HttpPostClient) -> AddAccount {
+func makeRemoteAddAccount() -> AddAccount {
+    return makeRemoteAddAccountWith(httpClient: makeAlamofireAdapter())
+}
+
+public func makeRemoteAddAccountWith(httpClient: HttpPostClient) -> AddAccount {
         let remoteAddAccount =  RemoteAddAccount(url: makeApiUrl(path: "signup"), HttpClient: httpClient)
         return MainQueueDispatchDecorator(remoteAddAccount)
 }
